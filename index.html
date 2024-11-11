@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1 class="heading">
-        Match Day Scoreboard - <input id="home-team" type="text"> vs <input id="away-team" type="text">
+        Match Day Scoreboard - <input id="home-team" type="text" required> vs <input id="away-team" type="text" required>
     </h1>
     <div class="scores-area">
         <div class="controls-area">
@@ -57,20 +57,22 @@
         </div>
         <div class="teams-area">
             <div class="teams">
-                <input id="team1-player1" type="text">
-                <input id="team1-player2" type="text">
-                <input id="team1-player3" type="text">
-                <input id="team1-player4" type="text">
-                <input id="team1-player5" type="text">
-                <input id="team1-player6" type="text">
+                <h2 id="teamsheet-home-team"></h2>
+                <p>1. <input id="team1-player1" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>2. <input id="team1-player2" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>3. <input id="team1-player3" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>4. <input id="team1-player4" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>5. <input id="team1-player5" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>6. <input id="team1-player6" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
             </div>
             <div class="teams">
-                <input id="team2-player1" type="text">
-                <input id="team2-player2" type="text">
-                <input id="team2-player3" type="text">
-                <input id="team2-player4" type="text">
-                <input id="team2-player5" type="text">
-                <input id="team2-player6" type="text">
+                <h2 id="teamsheet-away-team"></h2>
+                <p>1. <input id="team2-player1" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>2. <input id="team2-player2" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>3. <input id="team2-player3" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>4. <input id="team2-player4" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>5. <input id="team2-player5" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <p>6. <input id="team2-player6" type="text"> <class id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
             </div>
         </div>
     </div>
