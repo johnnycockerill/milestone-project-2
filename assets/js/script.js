@@ -1,29 +1,10 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
-            }
-        });
-    }
-
-    runGame();
-
-});
-
 function displayTeams() {
-    let homeTeam = document.getElementById("home-team").text;
-    let awayTeam = document.getElementById("away-team").text;
+    let homeTeam = document.getElementById('home-team').textContent;
+    document.getElementById('teamsheet-home-team').innerHTML = $(homeTeam);
 
-    document.getElementById('teamsheet-home-team').textContent = homeTeam;
-    document.getElementById('teamsheet-away-team').textContent = awayTeam;
+}
 
+function runs1 () {
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    document.getElementById("total-score").innerText = ++currentScore;
 }

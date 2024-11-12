@@ -32,10 +32,10 @@ body {
     display: inline-block;
 }
 
-#h-team {
+.h-team {
     float: left;
 }
 
-#a-team {
+.a-team {
     float: right;
 }

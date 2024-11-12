@@ -13,8 +13,11 @@
 </head>
 <body>
     <h1 class="heading">
-        Match Day Scoreboard - <input id="home-team" type="text" required> vs <input id="away-team" type="text" required> <button id="teams-update">Update Teams</button>
+        Match Day Scoreboard - <input id="home-team" type="text" required> vs <input id="away-team" type="text" required> <button id="teams-update" onclick="displayTeams()">Update Teams</button>
     </h1>
+    <nav>
+        <a href="scores.html" target="_blank">Scores Page</a>
+    </nav>
     <div class="scores-area">
         <div class="active-area">
             <div class="active-bat">
@@ -32,9 +35,12 @@
             <div class="active-extras">
                 <p id="extras-score">0</p>
             </div>
+            <div class="active-score">
+                <p id="total-score">0</p>
+            </div>
         </div>
         <div class="controls-area">
-            <button data-type="dot">
+            <button data-type="dot" onclick="runs1()">
                 dot
             </button>
             <button data-type="one">
@@ -73,7 +79,7 @@
 
         </div>
         <div class="teams-area">
-            <div id="h-team">
+            <div class="h-team">
                 <h2 id="teamsheet-home-team">x</h2>
                 <p>1. <input id="team1-player1" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
                 <p>2. <input id="team1-player2" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
@@ -82,7 +88,7 @@
                 <p>5. <input id="team1-player5" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
                 <p>6. <input id="team1-player6" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
             </div>
-            <div id="a-team">
+            <div class="a-team">
                 <h2 id="teamsheet-away-team">x</h2>
                 <p>1. <input id="team2-player1" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
                 <p>2. <input id="team2-player2" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
@@ -93,6 +99,9 @@
             </div>
         </div>
     </div>
+    <footer>
+        <a href="scores.html" target="_blank">Scores Page</a>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
