@@ -49,23 +49,16 @@
             <button id="dot">
                 dot
             </button>
-            <button id="1-run">
-                one
-            </button>
-            <button id="2-run">
-                two
-            </button>
-            <button data-type="three">
-                three
-            </button>
-            <button data-type="four">
-                four
-            </button>
-            <button data-type="five">
-                five
-            </button>
-            <button data-type="six">
-                six
+            <select name="runs" id="run">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <button id="runs">
+                Runs
             </button>
             <select name="byes" id="bye">
                 <optgroup label="Byes">
@@ -94,8 +87,20 @@
             <button id="wides">
                 Wides
             </button>
-            <button data-type="no-ball">
-                no ball
+            <select name="no-balls" id="no-ball">
+                <option value="0">No extra runs</option>
+                <option value="1">Plus 1 run</option>
+                <option value="2">Plus 2 runs</option>
+                <option value="3">Plus 3 runs</option>
+                <option value="4">Plus 4 runs</option>
+                <option value="5">Plus 5 runs</option>
+                <option value="6">Plus 6 runs</option>
+            </select>
+            <button id="no-balls-byes">
+                No-ball(byes)
+            </button>
+            <button id="no-balls-runs">
+                No-ball(runs)
             </button>
             <button data-type="wicket">
                 wicket
