@@ -110,5 +110,5 @@ function noBallRuns () {
     document.getElementById("total-score").innerText = currentScore + noBallValue + 1;
     document.getElementById("bat-1-score").innerText = currentBatScore + noBallValue;
     document.getElementById("extras-score").innerText = ++extrasValue;
-    document.getElementById("active-runs").innerText = currentBowlScore + noBallValue;
+    document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
 }
