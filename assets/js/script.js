@@ -13,6 +13,9 @@ Run2Button.addEventListener("click", runs2);
 const byesButton = document.getElementById("byes");
 byesButton.addEventListener("click", byes);
 
+const widesButton = document.getElementById("wides");
+widesButton.addEventListener("click", wides);
+
 /**
  * update teams entered into team sheet below
  */
@@ -69,8 +72,11 @@ function runs2 () {
 
     }
 
+/**
+ * updates scoresheet for byes
+ */
 function byes () {
-    let byesValue = parseInt(document.getElementById("bye").innerText);
+    let byesValue = parseInt(document.getElementById("bye").value);
     let extrasValue = parseInt(document.getElementById("extras-score").innerText);
     let currentScore = parseInt(document.getElementById("total-score").innerText);
     let currentBalls = parseInt(document.getElementById("active-balls").innerText);
@@ -80,5 +86,18 @@ function byes () {
     document.getElementById("extras-score").innerText = extrasValue + byesValue;
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
+}
+
+/**
+ * updates scoresheet for wides
+ */
+function wides () {
+    let widesValue = parseInt(document.getElementById("wide").value);
+    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+
+    document.getElementById("total-score").innerText = currentScore + widesValue;
+    document.getElementById("extras-score").innerText = extrasValue + widesValue;
 
 }
