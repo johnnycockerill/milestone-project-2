@@ -1,6 +1,9 @@
 const teamsButton = document.getElementById("teams-update");
 teamsButton.addEventListener("click", displayTeams);
 
+const submitTeamsButton = document.getElementById("submit-teams");
+submitTeamsButton.addEventListener("click", submitTeams);
+
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
 
@@ -117,4 +120,11 @@ function noBallRuns () {
     document.getElementById("bat-1-score").innerText = currentBatScore + noBallValue;
     document.getElementById("extras-score").innerText = ++extrasValue;
     document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
+}
+
+
+var battingTeam = [document.getElementById('team1-player1').innerText, ("team1-player2"), ("team1-player3"), ("team1-player4"), ("team1-player5"), ("team1-player6")];
+function submitTeams () {
+console.log(battingTeam);
+
 }
