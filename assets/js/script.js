@@ -89,6 +89,9 @@ function wides () {
     document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
 }
 
+/**
+ * updates score sheet for no balls with byes
+ */
 function noBallByes () {
     let noBallValue = parseInt(document.getElementById("no-ball").value);
     let extrasValue = parseInt(document.getElementById("extras-score").innerText);
@@ -100,6 +103,9 @@ function noBallByes () {
     document.getElementById("active-runs").innerText = ++currentBowlScore;
 }
 
+/**
+ * updates score sheet for no balls with runs
+ */
 function noBallRuns () {
     let noBallValue = parseInt(document.getElementById("no-ball").value);
     let currentBatScore = parseInt(document.getElementById("bat-1-score").innerText);

@@ -12,12 +12,16 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <!-- heading and team name input -->
     <h1 class="heading">
         Match Day Scoreboard - <input id="home-team" type="text" required> vs <input id="away-team" type="text" required> <button id="teams-update" onclick="displayTeams()">Update Teams</button>
     </h1>
     <nav>
         <a href="scores.html" target="_blank">Scores Page</a>
     </nav>
+
+    <!-- active scores area -->
     <div class="scores-area">
         <div class="active-area">
             <div class="active-bat">
@@ -45,6 +49,8 @@
                 <p id="active-balls-total">0</p>
             </div>
         </div>
+
+        <!-- buttons controls area -->
         <div class="controls-area">
             <button id="dot">
                 dot
@@ -106,6 +112,8 @@
                 wicket
             </button>
         </div>
+
+        <!-- team sheet area / team line ups-->
         <div class="teams-area">
             <div class="h-team">
                 <h2 id="teamsheet-home-team">x</h2>
