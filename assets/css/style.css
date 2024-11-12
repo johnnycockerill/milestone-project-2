@@ -27,3 +27,15 @@ body {
     margin-right: auto;
     padding: 1%;
 }
+
+.active-bat p {
+    display: inline-block;
+}
+
+#h-team {
+    float: left;
+}
+
+#a-team {
+    float: right;
+}
