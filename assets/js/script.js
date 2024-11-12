@@ -10,11 +10,20 @@ Run1Button.addEventListener("click", runs1);
 const Run2Button = document.getElementById("2-run");
 Run2Button.addEventListener("click", runs2);
 
+const byesButton = document.getElementById("byes");
+byesButton.addEventListener("click", byes);
+
+/**
+ * update teams entered into team sheet below
+ */
 function displayTeams() {
     let homeTeam = document.getElementById('home-team').textContent;
     document.getElementById('teamsheet-home-team').innerHTML = $(homeTeam);
 }
 
+/**
+ * updates scoresheet for a dot ball
+ */
 function dot () {
     let currentBalls = parseInt(document.getElementById("active-balls").innerText);
     let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
@@ -24,6 +33,9 @@ function dot () {
 
     }
 
+/**
+ * updates scoresheet for 1 run
+ */
 function runs1 () {
     let currentScore = parseInt(document.getElementById("total-score").innerText);
     let currentBatScore = parseInt(document.getElementById("bat-1-score").innerText);
@@ -39,6 +51,9 @@ function runs1 () {
 
     }
 
+/**
+ * updates scoresheet for 2 runs
+ */
 function runs2 () {
     let currentScore = parseInt(document.getElementById("total-score").innerText);
     let currentBatScore = parseInt(document.getElementById("bat-1-score").innerText);
@@ -53,3 +68,17 @@ function runs2 () {
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
     }
+
+function byes () {
+    let byesValue = parseInt(document.getElementById("bye").innerText);
+    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
+    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+
+    document.getElementById("total-score").innerText = currentScore + byesValue;
+    document.getElementById("extras-score").innerText = extrasValue + byesValue;
+    document.getElementById("active-balls").innerText = ++currentBalls;
+    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
+}
