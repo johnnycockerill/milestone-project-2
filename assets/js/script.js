@@ -1,6 +1,9 @@
 const teamsButton = document.getElementById("teams-update");
 teamsButton.addEventListener("click", displayTeams);
 
+const submitTeamsButton = document.getElementById("submit-teams");
+submitTeamsButton.addEventListener("click", submitTeams);
+
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
 
@@ -139,7 +142,7 @@ var bat5Score = document.getElementById("batsman-score-5").innerText;
 let bat6 = document.getElementById("team1-player-6").innerText;
 var bat6Score = document.getElementById("batsman-score-6").innerText;
 
-function submitTeamsButtton () {
+function submitTeams () {
     team1.push({name: bat1, score: bat1Score});
     team1.push({name: bat2, score: bat2Score});
     team1.push({name: bat3, score: bat3Score});
