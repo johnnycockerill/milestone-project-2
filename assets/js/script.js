@@ -1,9 +1,6 @@
 const teamsButton = document.getElementById("teams-update");
 teamsButton.addEventListener("click", displayTeams);
 
-const submitTeamsButton = document.getElementById("submit-teams");
-submitTeamsButton.addEventListener("click", submitTeams);
-
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
 
@@ -122,9 +119,33 @@ function noBallRuns () {
     document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
 }
 
+let team1 = [];
 
-var battingTeam = [document.getElementById('team1-player1').innerText, ("team1-player2"), ("team1-player3"), ("team1-player4"), ("team1-player5"), ("team1-player6")];
-function submitTeams () {
-console.log(battingTeam);
+let bat1 = document.getElementById("team1-player-1").innerText;
+var bat1Score = document.getElementById("batsman-score-1").innerText;
+
+let bat2 = document.getElementById("team1-player-2").innerText;
+var bat2Score = document.getElementById("batsman-score-2").innerText;
+
+let bat3 = document.getElementById("team1-player-3").innerText;
+var bat3Score = document.getElementById("batsman-score-3").innerText;
+
+let bat4 = document.getElementById("team1-player-4").innerText;
+var bat4Score = document.getElementById("batsman-score-4").innerText;
+
+let bat5 = document.getElementById("team1-player-5").innerText;
+var bat5Score = document.getElementById("batsman-score-5").innerText;
+
+let bat6 = document.getElementById("team1-player-6").innerText;
+var bat6Score = document.getElementById("batsman-score-6").innerText;
+
+function submitTeamsButtton () {
+    team1.push({name: bat1, score: bat1Score});
+    team1.push({name: bat2, score: bat2Score});
+    team1.push({name: bat3, score: bat3Score});
+    team1.push({name: bat4, score: bat4Score});
+    team1.push({name: bat5, score: bat5Score});
+    team1.push({name: bat6, score: bat6Score});
+    console.log(team1);
 
 }

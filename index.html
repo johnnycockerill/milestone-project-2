@@ -117,12 +117,12 @@
         <div class="teams-area">
             <div class="h-team">
                 <h2 id="teamsheet-home-team">x</h2>
-                <p>1. <input id="team1-player1" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>2. <input id="team1-player2" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>3. <input id="team1-player3" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>4. <input id="team1-player4" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>5. <input id="team1-player5" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>6. <input id="team1-player6" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <input id="team1-player-1" placeholder="Player 1" type="text">  <span id="batsman-score-1">0</span><br>
+                <input id="team1-player-2" placeholder="Player 2" type="text">  <span id="batsman-score-2">0</span><br>
+                <input id="team1-player-3" placeholder="Player 3" type="text">  <span id="batsman-score-3">0</span><br>
+                <input id="team1-player-4" placeholder="Player 4" type="text">  <span id="batsman-score-4">0</span><br>
+                <input id="team1-player-5" placeholder="Player 5" type="text">  <span id="batsman-score-5">0</span><br>
+                <input id="team1-player-6" placeholder="Player 6" type="text">  <span id="batsman-score-6">0</span><br>
             </div>
             <div class="a-team">
                 <h2 id="teamsheet-away-team">x</h2>
@@ -135,7 +135,7 @@
             </div>
         </div>
         <div class="clear">
-            <button id="submit-teams">Submit Teams</button>
+            <button id="submit-teams" onclick="submitTeamsButton()">Submit Teams</button>
         </div>
     </div>
     <footer>
