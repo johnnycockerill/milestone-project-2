@@ -1,9 +1,3 @@
-const teamsButton = document.getElementById("teams-update");
-teamsButton.addEventListener("click", displayTeams);
-/**
-const submitTeamsButton = document.getElementById("submit-teams");
-submitTeamsButton.addEventListener("click", submitTeams);
-*/
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
 
@@ -21,14 +15,6 @@ noBallByesButton.addEventListener("click", noBallByes);
 
 const noBallRunsButton = document.getElementById("no-balls-runs");
 noBallRunsButton.addEventListener("click", noBallRuns);
-
-/**
- * update teams entered into team sheet below
- */
-function displayTeams() {
-    let homeTeam = document.getElementById('home-team').textContent;
-    document.getElementById('teamsheet-home-team').innerHTML = $(homeTeam);
-}
 
 /**
  * updates scoresheet for a dot ball
@@ -122,13 +108,31 @@ function noBallRuns () {
     document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
 }
 
-let team1 = [];
+window.addEventListener("load", function teams () {
+    let hTeam = prompt("Batting Team: ", "");
+    if (hTeam != null) {
+        this.document.getElementsById("home-team").value = hTeam;
+    }
+    let aTeam = prompt("Fielding Team: ", "");
+    document.getElementsByClassName("away-team").value = aTeam;
+    console.log(hTeam);
+    console.log(aTeam);
+});
 
-window.onload =  function submitTeam () {
+let team1 = [];
+let team2 = [];
+
+window.addEventListener("load", function submitTeam () {
+
     for (let ii = 0; ii < 6; ii++) {
-    let player = prompt("Name of ", "player");
-    team1[ii] = {name: player, dismissal: "-", bowler: "-", score: 0};
+    let player = prompt("Name of ", "batter");
+    team1[ii] = {name: player, number: ii + 1, dismissal: "-", bowler: "-", score: 0};
+}
+    for (let ii = 0; ii < 6; ii++) {
+    let player = prompt("Name of ", "fielder");
+    team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0};
 }
 console.log(team1);
-}
+console.log(team2);
+});
 
