@@ -125,8 +125,10 @@ function noBallRuns () {
 let team1 = [];
 
 window.onload =  function submitTeam () {
-    for (let ii = 1; ii < 7; ii++) {
+    for (let ii = 0; ii < 6; ii++) {
     let player = prompt("Name of ", "player");
-    team1.push = {name: player, score: 0};
-}}
+    team1[ii] = {name: player, dismissal: "-", bowler: "-", score: 0};
+}
+console.log(team1);
+}
 
