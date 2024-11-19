@@ -15,7 +15,10 @@
     
     <!-- heading and team name input -->
     <h1 class="heading">
-        Match Day Scoreboard - <p id="home-team"></p> vs <p class="away-team"></p> <button id="teams-update" onclick="displayTeams()">Update Teams</button>
+        <div id="teams-heading">
+            <p>Match Day Scoreboard - </p>
+            <p id="home-team"></p><p>&nbsp;vs&nbsp;</p><p id="away-team"></p>
+        </div>
     </h1>
     <nav>
         <a href="scores.html" target="_blank">Scores Page</a>
@@ -116,17 +119,12 @@
         <!-- team sheet area / team line ups-->
         <div class="teams-area">
             <div class="h-team">
-                <h2 class="home-team">x</h2>
+                <h2 id="home-team-team">x</h2>
 
             </div>
             <div class="a-team">
-                <h2 class="away-team">x</h2>
-                <p>1. <input id="team2-player1" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>2. <input id="team2-player2" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>3. <input id="team2-player3" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>4. <input id="team2-player4" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>5. <input id="team2-player5" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
-                <p>6. <input id="team2-player6" type="text"> <span id="dismissal-mode">-</span> <span class="dismissal-bowler">-</span> <span class="batsman-score">0</span>
+                <h2 id="away-team-team">x</h2>
+
             </div>
         </div>
         <div class="clear">

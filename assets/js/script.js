@@ -108,13 +108,21 @@ function noBallRuns () {
     document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
 }
 
-window.addEventListener("load", function teams () {
+window.addEventListener("load", function teamInput () {
     let hTeam = prompt("Batting Team: ", "");
-    if (hTeam != null) {
-        this.document.getElementsById("home-team").value = hTeam;
-    }
     let aTeam = prompt("Fielding Team: ", "");
-    document.getElementsByClassName("away-team").value = aTeam;
+    if (hTeam != null) {
+        this.document.getElementById("home-team").innerHTML = hTeam;
+    }
+    if (hTeam != null) {
+        this.document.getElementById("home-team-team").innerHTML = hTeam;
+    }
+    if (aTeam != null) {
+        this.document.getElementById("away-team").innerHTML = aTeam;
+    }
+    if (aTeam != null) {
+        this.document.getElementById("away-team-team").innerHTML = aTeam;
+    }
     console.log(hTeam);
     console.log(aTeam);
 });
