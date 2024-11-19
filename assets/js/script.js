@@ -1,3 +1,6 @@
+const startButton = document.getElementById("start-innings");
+startButton.addEventListener("click", startInnings);
+
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
 
@@ -134,7 +137,7 @@ window.addEventListener("load", function submitTeam () {
 
     for (let ii = 0; ii < 6; ii++) {
     let player = prompt("Name of ", "batter");
-    team1[ii] = {name: player, number: ii + 1, dismissal: "-", bowler: "-", score: 0};
+    team1[ii] = {name: player, number: ii + 1, dismissal: "-", bowler: "-", score: 0, strike: false};
 }
     for (let ii = 0; ii < 6; ii++) {
     let player = prompt("Name of ", "fielder");
@@ -144,3 +147,23 @@ console.log(team1);
 console.log(team2);
 });
 
+let activeBats = [];
+let activeBowler = [];
+
+function startInnings () {
+    activeBats[0] = team1[0];
+    activeBats[1] = team1[1];
+    team1.splice(0, 2);
+    for (let object of activeBats) {
+        if (object.number === 1) {
+            object.strike = true;
+        }
+    }
+    document.getElementById("active-bat-1").innerHTML = activeBats[0].name;
+    document.getElementById("active-bat-2").innerHTML = activeBats[1].name;
+
+    
+
+console.log(activeBats);
+console.log(team1);
+}
