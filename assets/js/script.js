@@ -20,34 +20,6 @@ const noBallRunsButton = document.getElementById("no-balls-runs");
 noBallRunsButton.addEventListener("click", noBallRuns);
 
 /**
- * updates scoresheet for wides
- */
-function wides () {
-    let widesValue = parseInt(document.getElementById("wide").value);
-    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
-    let currentScore = parseInt(document.getElementById("total-score").innerText);
-    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
-
-    document.getElementById("total-score").innerText = currentScore + widesValue;
-    document.getElementById("extras-score").innerText = extrasValue + widesValue;
-    document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
-}
-
-/**
- * updates score sheet for no balls with byes
- */
-function noBallByes () {
-    let noBallValue = parseInt(document.getElementById("no-ball").value);
-    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
-    let currentScore = parseInt(document.getElementById("total-score").innerText);
-    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
-
-    document.getElementById("total-score").innerText = currentScore + noBallValue + 1;
-    document.getElementById("extras-score").innerText = extrasValue + noBallValue + 1;
-    document.getElementById("active-runs").innerText = ++currentBowlScore;
-}
-
-/**
  * updates score sheet for no balls with runs
  */
 function noBallRuns () {
@@ -174,15 +146,98 @@ function runs () {
     }
 
     if (runsValue % 2 === 0) {
-        } else {
-            
+    } else {
+        for (let object of activeBats) {
+            if (object.strike === true) {
+                object.strike = false;
+            } else {
+                object.strike = true;
+            }
         }
-    document.getElementById("active-bat-1").innerHTML = activeBats[0].name;
-    document.getElementById("active-bat-2").innerHTML = activeBats[1].name;
+    }
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            document.getElementById("active-bat-1").innerHTML = object.name;
+            document.getElementById("bat-1-score").innerHTML = object.score;
+        } else if (object.strike === false) {
+            document.getElementById("active-bat-2").innerHTML = object.name;
+            document.getElementById("bat-2-score").innerHTML = object.score;
+        }
+    }
     document.getElementById("total-score").innerText = currentScore + runsValue;
     document.getElementById("active-runs").innerText = currentBowlScore + runsValue;
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
     console.log(activeBats);
+}
+
+/**
+ * updates score sheet for no balls with runs
+ */
+function noBallRuns () {
+    let noBallValue = parseInt(document.getElementById("no-ball").value);
+    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            object.score = object.score + noBallValue;
+        }
+    }
+
+    if (noBallValue % 2 === 0) {
+    } else {
+        for (let object of activeBats) {
+            if (object.strike === true) {
+                object.strike = false;
+            } else {
+                object.strike = true;
+            }
+        }
+    }
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            document.getElementById("active-bat-1").innerHTML = object.name;
+            document.getElementById("bat-1-score").innerHTML = object.score;
+        } else if (object.strike === false) {
+            document.getElementById("active-bat-2").innerHTML = object.name;
+            document.getElementById("bat-2-score").innerHTML = object.score;
+        }
+    }
+
+    document.getElementById("total-score").innerText = currentScore + noBallValue + 1;
+    document.getElementById("extras-score").innerText = ++extrasValue;
+    document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
+}
+
+/**
+ * updates score sheet for no balls with byes
+ */
+function noBallByes () {
+    let noBallValue = parseInt(document.getElementById("no-ball").value);
+    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
+
+    document.getElementById("total-score").innerText = currentScore + noBallValue + 1;
+    document.getElementById("extras-score").innerText = extrasValue + noBallValue + 1;
+    document.getElementById("active-runs").innerText = ++currentBowlScore;
+}
+
+/**
+ * updates scoresheet for wides
+ */
+function wides () {
+    let widesValue = parseInt(document.getElementById("wide").value);
+    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
+
+    document.getElementById("total-score").innerText = currentScore + widesValue;
+    document.getElementById("extras-score").innerText = extrasValue + widesValue;
+    document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
 }
