@@ -251,7 +251,7 @@ function wicket () {
     for (let object of activeBats) {
         if (object.strike === true) {
             var paragraph = document.getElementById("batting-team");
-            paragraph.textContent += `\n${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
+            paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
         }}
 
     for (let object of activeBats) {
