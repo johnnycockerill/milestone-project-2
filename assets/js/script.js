@@ -19,6 +19,9 @@ noBallByesButton.addEventListener("click", noBallByes);
 const noBallRunsButton = document.getElementById("no-balls-runs");
 noBallRunsButton.addEventListener("click", noBallRuns);
 
+const wicketsButton = document.getElementById("wicket-button");
+wicketsButton.addEventListener("click", wicket);
+
 /**
  * updates score sheet for no balls with runs
  */
@@ -240,4 +243,22 @@ function wides () {
     document.getElementById("total-score").innerText = currentScore + widesValue;
     document.getElementById("extras-score").innerText = extrasValue + widesValue;
     document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
+}
+
+function wicket () {
+    let dismissalMethod = document.getElementById("wicket").value;
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            var paragraph = document.getElementById("batting-team");
+            paragraph.textContent += `\n${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
+        }}
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            object.splice;
+        }
+    }
+
+console.log(activeBats);
 }

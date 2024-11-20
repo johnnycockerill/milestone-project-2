@@ -107,8 +107,15 @@
             <button id="no-balls-runs">
                 No-ball(runs)
             </button>
-            <button data-type="wicket">
-                wicket
+            <select name="wickets" id="wicket">
+                <option value="bowled">Bowled</option>
+                <option value="caught">Caught</option>
+                <option value="lbw">LBW</option>
+                <option value="run-out">Run Out</option>
+                <option value="stumped">Stumped</option>
+            </select>
+            <button id="wicket-button">
+                Wicket
             </button>
         </div>
 
@@ -116,11 +123,12 @@
         <div class="teams-area">
             <div class="h-team">
                 <h2 id="home-team-team">x</h2>
+                <p  id="batting-team"></p>
 
             </div>
             <div class="a-team">
                 <h2 id="away-team-team">x</h2>
-
+                <p id="fielding-team"></p>
             </div>
         </div>
         <div class="clear">
