@@ -20,54 +20,6 @@ const noBallRunsButton = document.getElementById("no-balls-runs");
 noBallRunsButton.addEventListener("click", noBallRuns);
 
 /**
- * updates scoresheet for a dot ball
- */
-function dot () {
-    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
-    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
-
-    document.getElementById("active-balls").innerText = ++currentBalls;
-    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
-
-    }
-
-/**
- * updates scoresheet for runs
- */
-function runs () {
-    let runsValue = parseInt(document.getElementById("run").value);
-    let currentScore = parseInt(document.getElementById("total-score").innerText);
-    let currentBatScore = parseInt(document.getElementById("bat-1-score").innerText);
-    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
-    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
-    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
-
-    document.getElementById("total-score").innerText = currentScore + runsValue;
-    document.getElementById("bat-1-score").innerText = currentBatScore + runsValue;
-    document.getElementById("active-runs").innerText = currentBowlScore + runsValue;
-    document.getElementById("active-balls").innerText = ++currentBalls;
-    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
-
-}
-
-/**
- * updates scoresheet for byes
- */
-function byes () {
-    let byesValue = parseInt(document.getElementById("bye").value);
-    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
-    let currentScore = parseInt(document.getElementById("total-score").innerText);
-    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
-    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
-
-    document.getElementById("total-score").innerText = currentScore + byesValue;
-    document.getElementById("extras-score").innerText = extrasValue + byesValue;
-    document.getElementById("active-balls").innerText = ++currentBalls;
-    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
-
-}
-
-/**
  * updates scoresheet for wides
  */
 function wides () {
@@ -110,7 +62,9 @@ function noBallRuns () {
     document.getElementById("extras-score").innerText = ++extrasValue;
     document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
 }
-
+/**
+ * function runs with window load to request the team names from the user
+ */
 window.addEventListener("load", function teamInput () {
     let hTeam = prompt("Batting Team: ", "");
     let aTeam = prompt("Fielding Team: ", "");
@@ -133,6 +87,9 @@ window.addEventListener("load", function teamInput () {
 let team1 = [];
 let team2 = [];
 
+/**
+ * function runs with window load to request the players names from the user
+ */
 window.addEventListener("load", function submitTeam () {
 
     for (let ii = 0; ii < 6; ii++) {
@@ -150,6 +107,9 @@ console.log(team2);
 let activeBats = [];
 let activeBowler = [];
 
+/**
+ * begin innings, bringing the strike batsmen into control area and choosing opening bowler
+ */
 function startInnings () {
     activeBats[0] = team1[0];
     activeBats[1] = team1[1];
@@ -166,4 +126,63 @@ function startInnings () {
 
 console.log(activeBats);
 console.log(team1);
+}
+
+/**
+ * updates scoresheet for a dot ball
+ */
+function dot () {
+    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
+    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+
+    document.getElementById("active-balls").innerText = ++currentBalls;
+    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
+    }
+    
+/**
+ * updates scoresheet for byes
+ */
+function byes () {
+    let byesValue = parseInt(document.getElementById("bye").value);
+    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
+    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+
+    document.getElementById("total-score").innerText = currentScore + byesValue;
+    document.getElementById("extras-score").innerText = extrasValue + byesValue;
+    document.getElementById("active-balls").innerText = ++currentBalls;
+    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
+}
+
+/**
+ * updates scoresheet for runs
+ */
+function runs () {
+    let runsValue = parseInt(document.getElementById("run").value);
+    let currentScore = parseInt(document.getElementById("total-score").innerText);
+    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
+    let currentBalls = parseInt(document.getElementById("active-balls").innerText);
+    let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            object.score = object.score + runsValue;
+        }
+    }
+
+    if (runsValue % 2 === 0) {
+        } else {
+            
+        }
+    document.getElementById("active-bat-1").innerHTML = activeBats[0].name;
+    document.getElementById("active-bat-2").innerHTML = activeBats[1].name;
+    document.getElementById("total-score").innerText = currentScore + runsValue;
+    document.getElementById("active-runs").innerText = currentBowlScore + runsValue;
+    document.getElementById("active-balls").innerText = ++currentBalls;
+    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
+    console.log(activeBats);
 }
