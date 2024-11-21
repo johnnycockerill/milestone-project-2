@@ -69,7 +69,7 @@ window.addEventListener("load", function submitTeam () {
 
     for (let ii = 0; ii < 6; ii++) {
     let player = prompt("Name of ", "batter");
-    team1[ii] = {name: player, number: ii + 1, dismissal: "-", bowler: "-", score: 0, strike: false};
+    team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
 }
     for (let ii = 0; ii < 6; ii++) {
     let player = prompt("Name of ", "fielder");
@@ -244,7 +244,10 @@ function wides () {
     document.getElementById("extras-score").innerText = extrasValue + widesValue;
     document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
 }
-
+/**
+ * provides function for updating scorecard with dismissed batsman info and
+ * brings in next batsman into active bats array
+ */
 function wicket () {
     let dismissalMethod = document.getElementById("wicket").value;
 
@@ -254,11 +257,31 @@ function wicket () {
             paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
         }}
 
-    for (let object of activeBats) {
-        if (object.strike === true) {
-            object.splice;
+    for(var a = 0; a < activeBats.length; a++) {
+        for(var b in activeBats[a]) {
+            if(activeBats[a][b] === true) {
+                activeBats.splice(a, 1);
+                a--;
+                break;
+            }
         }
     }
+console.log(activeBats);
 
+activeBats[1] = team1[0];
+team1.splice(0, 1);
+activeBats[1].strike = true;
+
+for (let object of activeBats) {
+    if (object.strike === true) {
+        document.getElementById("active-bat-1").innerHTML = object.name;
+        document.getElementById("bat-1-score").innerHTML = object.score;
+    } else if (object.strike === false) {
+        document.getElementById("active-bat-2").innerHTML = object.name;
+        document.getElementById("bat-2-score").innerHTML = object.score;
+    }
+}
+
+console.log(team1);
 console.log(activeBats);
 }
