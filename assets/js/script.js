@@ -96,6 +96,8 @@ function startInnings () {
     }
     document.getElementById("active-bat-1").innerHTML = activeBats[0].name;
     document.getElementById("active-bat-2").innerHTML = activeBats[1].name;
+    document.getElementById("bat-1-no").innerHTML = activeBats[0].number;
+    document.getElementById("bat-2-no").innerHTML = activeBats[1].number;
 
     document.getElementById("start-innings").style.backgroundColor = "#D3D3D3";
     document.getElementById("start-innings").style.color = "#000000";
@@ -129,6 +131,29 @@ function byes () {
     let currentScore = parseInt(document.getElementById("total-score").innerText);
     let currentBalls = parseInt(document.getElementById("active-balls").innerText);
     let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+
+    if (byesValue % 2 === 0) {
+    } else {
+        for (let object of activeBats) {
+            if (object.strike === true) {
+                object.strike = false;
+            } else {
+                object.strike = true;
+            }
+        }
+    }
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            document.getElementById("active-bat-1").innerHTML = object.name;
+            document.getElementById("bat-1-score").innerHTML = object.score;
+            document.getElementById("bat-1-no").innerHTML = object.number;
+        } else if (object.strike === false) {
+            document.getElementById("active-bat-2").innerHTML = object.name;
+            document.getElementById("bat-2-score").innerHTML = object.score;
+            document.getElementById("bat-2-no").innerHTML = object.number;
+        }
+    }
 
     document.getElementById("total-score").innerText = currentScore + byesValue;
     document.getElementById("extras-score").innerText = extrasValue + byesValue;
@@ -168,9 +193,11 @@ function runs () {
         if (object.strike === true) {
             document.getElementById("active-bat-1").innerHTML = object.name;
             document.getElementById("bat-1-score").innerHTML = object.score;
+            document.getElementById("bat-1-no").innerHTML = object.number;
         } else if (object.strike === false) {
             document.getElementById("active-bat-2").innerHTML = object.name;
             document.getElementById("bat-2-score").innerHTML = object.score;
+            document.getElementById("bat-2-no").innerHTML = object.number;
         }
     }
     document.getElementById("total-score").innerText = currentScore + runsValue;
@@ -211,9 +238,11 @@ function noBallRuns () {
         if (object.strike === true) {
             document.getElementById("active-bat-1").innerHTML = object.name;
             document.getElementById("bat-1-score").innerHTML = object.score;
+            document.getElementById("bat-1-no").innerHTML = object.number;
         } else if (object.strike === false) {
             document.getElementById("active-bat-2").innerHTML = object.name;
             document.getElementById("bat-2-score").innerHTML = object.score;
+            document.getElementById("bat-2-no").innerHTML = object.number;
         }
     }
 
@@ -231,6 +260,29 @@ function noBallByes () {
     let currentScore = parseInt(document.getElementById("total-score").innerText);
     let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
 
+    if (noBallValue % 2 === 0) {
+    } else {
+        for (let object of activeBats) {
+            if (object.strike === true) {
+                object.strike = false;
+            } else {
+                object.strike = true;
+            }
+        }
+    }
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            document.getElementById("active-bat-1").innerHTML = object.name;
+            document.getElementById("bat-1-score").innerHTML = object.score;
+            document.getElementById("bat-1-no").innerHTML = object.number;
+        } else if (object.strike === false) {
+            document.getElementById("active-bat-2").innerHTML = object.name;
+            document.getElementById("bat-2-score").innerHTML = object.score;
+            document.getElementById("bat-2-no").innerHTML = object.number;
+        }
+    }
+
     document.getElementById("total-score").innerText = currentScore + noBallValue + 1;
     document.getElementById("extras-score").innerText = extrasValue + noBallValue + 1;
     document.getElementById("active-runs").innerText = ++currentBowlScore;
@@ -244,6 +296,29 @@ function wides () {
     let extrasValue = parseInt(document.getElementById("extras-score").innerText);
     let currentScore = parseInt(document.getElementById("total-score").innerText);
     let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
+
+    if (widesValue % 2 === 0) {
+        for (let object of activeBats) {
+            if (object.strike === true) {
+                object.strike = false;
+            } else {
+                object.strike = true;
+            }
+        }
+    } else {        
+    }
+
+    for (let object of activeBats) {
+        if (object.strike === true) {
+            document.getElementById("active-bat-1").innerHTML = object.name;
+            document.getElementById("bat-1-score").innerHTML = object.score;
+            document.getElementById("bat-1-no").innerHTML = object.number;
+        } else if (object.strike === false) {
+            document.getElementById("active-bat-2").innerHTML = object.name;
+            document.getElementById("bat-2-score").innerHTML = object.score;
+            document.getElementById("bat-2-no").innerHTML = object.number;
+        }
+    }
 
     document.getElementById("total-score").innerText = currentScore + widesValue;
     document.getElementById("extras-score").innerText = extrasValue + widesValue;

@@ -60,7 +60,7 @@ body {
     margin-right: 1.5rem;
 }
 
-#active-bat-1, #bat-1-score, #scores-total {
+#active-bat-1, #bat-1-score, #scores-total, #bat-1-no {
     color: black;
     font-weight: bold;
 }
