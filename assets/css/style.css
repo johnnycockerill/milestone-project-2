@@ -47,3 +47,40 @@ body {
 .clear {
     clear: both;
 }
+
+.active-area {
+    margin-bottom: 2rem;
+}
+
+.controls-area {
+    margin-top: 1rem;
+}
+
+.controls-area button {
+    margin-right: 1.5rem;
+}
+
+#active-bat-1, #bat-1-score, #scores-total {
+    color: black;
+    font-weight: bold;
+}
+
+#start-innings {
+    background-color: red;
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+#start-innings:hover {
+    border-color: red;
+    background-color: white;
+    color: red;
+    transition: 0.7s;
+}
+
+#start-innings:active {
+    border-color: black;
+    color: black;
+    background-color: grey;
+}

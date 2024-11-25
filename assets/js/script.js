@@ -97,6 +97,11 @@ function startInnings () {
     document.getElementById("active-bat-1").innerHTML = activeBats[0].name;
     document.getElementById("active-bat-2").innerHTML = activeBats[1].name;
 
+    document.getElementById("start-innings").style.backgroundColor = "#D3D3D3";
+    document.getElementById("start-innings").style.color = "#000000";
+    document.getElementById("start-innings").style.borderColor = "#000000";
+    document.getElementById("start-innings").disabled = true;
+
     
 
 console.log(activeBats);
