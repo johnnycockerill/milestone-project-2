@@ -356,9 +356,11 @@ for (let object of activeBats) {
     if (object.strike === true) {
         document.getElementById("active-bat-1").innerHTML = object.name;
         document.getElementById("bat-1-score").innerHTML = object.score;
+        document.getElementById("bat-1-no").innerHTML = object.number;
     } else if (object.strike === false) {
         document.getElementById("active-bat-2").innerHTML = object.name;
         document.getElementById("bat-2-score").innerHTML = object.score;
+        document.getElementById("bat-2-no").innerHTML = object.number;
     }
 }
 
