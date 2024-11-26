@@ -96,6 +96,14 @@ function startInnings () {
     document.getElementById("bowl-5-name").innerHTML = team2[4].name;
     document.getElementById("bowl-6-no").innerHTML = team2[5].number;
     document.getElementById("bowl-6-name").innerHTML = team2[5].name;
+
+    let activeBowler = prompt(`Bowler No. of Bowler: \n${team2[0].number}   ${team2[0].name} <br> ${team2[1].number}   ${team2[1].name} <br> ${team2[2].number}   ${team2[2].name} <br> ${team2[3].number}   ${team2[3].name} <br> ${team2[4].number}   ${team2[4].name} <br> ${team2[5].number}   ${team2[5].name}`, "number");
+    for (let object of team2) {
+        if (object.number == activeBowler) {
+            object.active = true;
+        }
+    }
+
     /**
     var selectTag = document.createElement("select");
     for (var i = 0; i < team2.length; i++) {
@@ -111,6 +119,7 @@ function startInnings () {
 
 console.log(activeBats);
 console.log(team1);
+console.log(team2);
 }
 
 /**
