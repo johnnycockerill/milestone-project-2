@@ -131,8 +131,9 @@ if (totalBalls % 6 === 0) {
 /**
  * function to choose new bowler at end of over
  */
-
-
+function newBowler () {
+    alert("new bowler");
+}
 
 /**
  * updates scoresheet for a dot ball
@@ -360,7 +361,7 @@ function wicket () {
 
     for (let object of activeBats) {
         if (object.strike === true) {
-            var paragraph = document.getElementById("batting-team");
+            var paragraph = document.getElementById(`batting-team-${wicketsTotal}`);
             paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
         }}
 
