@@ -124,15 +124,48 @@ console.log(team1);
 console.log(team2);
 }
 
-let totalBalls = document.getElementById("active-balls-total").value;
-if (totalBalls % 6 === 0) {
-    newBowler;
-}
 /**
  * function to choose new bowler at end of over
  */
 function newBowler () {
-    alert("new bowler");
+    activeBowl[0].active = false;
+    activeBowl[0].balls = document.getElementById("active-balls").innerHTML;
+    activeBowl[0].runs = document.getElementById("active-runs").innerHTML;
+    activeBowl[0].wickets = document.getElementById("active-wkt").innerHTML;
+
+    let activeBowler = prompt(`Bowler No.: \n${team2[0].number}   ${team2[0].name} \n ${team2[1].number}   ${team2[1].name} \n ${team2[2].number}   ${team2[2].name} \n ${team2[3].number}   ${team2[3].name} \n ${team2[4].number}   ${team2[4].name}`, "number");
+    for (let object of team2) {
+        if (object.number == activeBowler) {
+            object.active = true;
+        }
+    }
+
+    for (let object of team2) {
+        if (object.active === true) {
+            document.getElementById("active-bowl").innerHTML = object.name;
+            document.getElementById("active-balls").innerHTML = object.balls;
+            document.getElementById("active-runs").innerHTML = object.runs;
+            document.getElementById("active-wkt").innerHTML = object.wickets;
+        }
+    }
+
+    team2[5] = activeBowl[0];
+    console.log(team2);
+
+    for(var a = 0; a < team2.length; a++) {
+        for(var b in team2[a]) {
+            if(team2[a][b] === true) {
+                activeBowl[1] = team2[a];
+                team2.splice(a, 1);
+                a--;
+                break;
+            }
+        }
+    }
+
+    activeBowl.shift();
+    console.log(team2);
+    console.log(activeBowl);
 }
 
 /**
@@ -145,7 +178,10 @@ function dot () {
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
+    if (currentBalls == "6") {
+        newBowler;
     }
+}
     
 /**
  * updates scoresheet for byes
