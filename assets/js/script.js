@@ -23,21 +23,6 @@ const wicketsButton = document.getElementById("wicket-button");
 wicketsButton.addEventListener("click", wicket);
 
 /**
- * updates score sheet for no balls with runs
- */
-function noBallRuns () {
-    let noBallValue = parseInt(document.getElementById("no-ball").value);
-    let currentBatScore = parseInt(document.getElementById("bat-1-score").innerText);
-    let extrasValue = parseInt(document.getElementById("extras-score").innerText);
-    let currentScore = parseInt(document.getElementById("total-score").innerText);
-    let currentBowlScore = parseInt(document.getElementById("active-runs").innerText);
-
-    document.getElementById("total-score").innerText = currentScore + noBallValue + 1;
-    document.getElementById("bat-1-score").innerText = currentBatScore + noBallValue;
-    document.getElementById("extras-score").innerText = ++extrasValue;
-    document.getElementById("active-runs").innerText = currentBowlScore + noBallValue + 1;
-}
-/**
  * function runs with window load to request the team names from the user
  */
 window.addEventListener("load", function teamInput () {
@@ -73,7 +58,7 @@ window.addEventListener("load", function submitTeam () {
 }
     for (let ii = 0; ii < 6; ii++) {
     let player = prompt("Name of ", "fielder");
-    team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0};
+    team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
 }
 console.log(team1);
 console.log(team2);
@@ -98,6 +83,19 @@ function startInnings () {
     document.getElementById("active-bat-2").innerHTML = activeBats[1].name;
     document.getElementById("bat-1-no").innerHTML = activeBats[0].number;
     document.getElementById("bat-2-no").innerHTML = activeBats[1].number;
+
+    document.getElementById("bowl-1-no").innerHTML = team2[0].number;
+    document.getElementById("bowl-1-name").innerHTML = team2[0].name;
+    document.getElementById("bowl-2-no").innerHTML = team2[1].number;
+    document.getElementById("bowl-2-name").innerHTML = team2[1].name;
+    document.getElementById("bowl-3-no").innerHTML = team2[2].number;
+    document.getElementById("bowl-3-name").innerHTML = team2[2].name;
+    document.getElementById("bowl-4-no").innerHTML = team2[3].number;
+    document.getElementById("bowl-4-name").innerHTML = team2[3].name;
+    document.getElementById("bowl-5-no").innerHTML = team2[4].number;
+    document.getElementById("bowl-5-name").innerHTML = team2[4].name;
+    document.getElementById("bowl-6-no").innerHTML = team2[5].number;
+    document.getElementById("bowl-6-name").innerHTML = team2[5].name;
 
     document.getElementById("start-innings").style.backgroundColor = "#D3D3D3";
     document.getElementById("start-innings").style.color = "#000000";
@@ -334,7 +332,7 @@ function wicket () {
     for (let object of activeBats) {
         if (object.strike === true) {
             var paragraph = document.getElementById("batting-team");
-            paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
+            paragraph.textContent += `<br>` + `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
         }}
 
     for(var a = 0; a < activeBats.length; a++) {
@@ -363,6 +361,9 @@ for (let object of activeBats) {
         document.getElementById("bat-2-no").innerHTML = object.number;
     }
 }
+
+let wicketsTotal = parseInt(document.getElementById("total-wickets").innerText);
+document.getElementById("total-wickets").innerText = ++wicketsTotal;
 
 console.log(team1);
 console.log(activeBats);
