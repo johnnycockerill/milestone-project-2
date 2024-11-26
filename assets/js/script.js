@@ -84,20 +84,12 @@ function startInnings () {
     document.getElementById("bat-1-no").innerHTML = activeBats[0].number;
     document.getElementById("bat-2-no").innerHTML = activeBats[1].number;
 
-    document.getElementById("bowl-1-no").innerHTML = team2[0].number;
-    document.getElementById("bowl-1-name").innerHTML = team2[0].name;
-    document.getElementById("bowl-2-no").innerHTML = team2[1].number;
-    document.getElementById("bowl-2-name").innerHTML = team2[1].name;
-    document.getElementById("bowl-3-no").innerHTML = team2[2].number;
-    document.getElementById("bowl-3-name").innerHTML = team2[2].name;
-    document.getElementById("bowl-4-no").innerHTML = team2[3].number;
-    document.getElementById("bowl-4-name").innerHTML = team2[3].name;
-    document.getElementById("bowl-5-no").innerHTML = team2[4].number;
-    document.getElementById("bowl-5-name").innerHTML = team2[4].name;
-    document.getElementById("bowl-6-no").innerHTML = team2[5].number;
-    document.getElementById("bowl-6-name").innerHTML = team2[5].name;
+    for (let i = 0; i < 6; i++) {
+        document.getElementById(`bowl-${i+1}-no`).innerHTML = team2[i].number;
+        document.getElementById(`bowl-${i+1}-name`).innerHTML = team2[i].name;
+    }
 
-    let activeBowler = prompt(`Bowler No.: \n${team2[0].number}   ${team2[0].name} <br> ${team2[1].number}   ${team2[1].name} <br> ${team2[2].number}   ${team2[2].name} <br> ${team2[3].number}   ${team2[3].name} <br> ${team2[4].number}   ${team2[4].name} <br> ${team2[5].number}   ${team2[5].name}`, "number");
+    let activeBowler = prompt(`Bowler No.: \n${team2[0].number}   ${team2[0].name} \n ${team2[1].number}   ${team2[1].name} \n ${team2[2].number}   ${team2[2].name} \n ${team2[3].number}   ${team2[3].name} \n ${team2[4].number}   ${team2[4].name} \n ${team2[5].number}   ${team2[5].name}`, "number");
     for (let object of team2) {
         if (object.number == activeBowler) {
             object.active = true;
@@ -363,10 +355,13 @@ function wides () {
 function wicket () {
     let dismissalMethod = document.getElementById("wicket").value;
 
+    let wicketsTotal = parseInt(document.getElementById("total-wickets").innerText);
+    document.getElementById("total-wickets").innerText = ++wicketsTotal;
+
     for (let object of activeBats) {
         if (object.strike === true) {
             var paragraph = document.getElementById("batting-team");
-            paragraph.textContent += `<br>` + `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: X `; 
+            paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
         }}
 
     for(var a = 0; a < activeBats.length; a++) {
@@ -396,8 +391,10 @@ for (let object of activeBats) {
     }
 }
 
-let wicketsTotal = parseInt(document.getElementById("total-wickets").innerText);
-document.getElementById("total-wickets").innerText = ++wicketsTotal;
+let currentBalls = parseInt(document.getElementById("active-balls").innerText);
+let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+document.getElementById("active-balls").innerText = ++currentBalls;
+document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
 console.log(team1);
 console.log(activeBats);
