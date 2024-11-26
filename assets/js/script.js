@@ -65,7 +65,7 @@ console.log(team2);
 });
 
 let activeBats = [];
-let activeBowler = [];
+let activeBowl = [];
 
 /**
  * begin innings, bringing the strike batsmen into control area and choosing opening bowler
@@ -104,13 +104,22 @@ function startInnings () {
         }
     }
 
-    /**
-    var selectTag = document.createElement("select");
-    for (var i = 0; i < team2.length; i++) {
-        var option = team2[i];
-        selectTag.options.add(new option(option.number, option.name));
+    for (let object of team2) {
+        if (object.active === true) {
+            document.getElementById("active-bowl").innerHTML = object.name;
+        }
     }
-    */
+
+    for(var a = 0; a < team2.length; a++) {
+        for(var b in team2[a]) {
+            if(team2[a][b] === true) {
+                activeBowl[0] = team2[a];
+                team2.splice(a, 1);
+                a--;
+                break;
+            }
+        }
+    }
 
     document.getElementById("start-innings").style.backgroundColor = "#D3D3D3";
     document.getElementById("start-innings").style.color = "#000000";
@@ -118,9 +127,20 @@ function startInnings () {
     document.getElementById("start-innings").disabled = true;
 
 console.log(activeBats);
+console.log(activeBowler);
 console.log(team1);
 console.log(team2);
 }
+
+let totalBalls = document.getElementById("active-balls-total").value;
+if (totalBalls % 6 === 0) {
+    newBowler;
+}
+/**
+ * function to choose new bowler at end of over
+ */
+
+
 
 /**
  * updates scoresheet for a dot ball
