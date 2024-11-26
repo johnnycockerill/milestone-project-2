@@ -96,13 +96,18 @@ function startInnings () {
     document.getElementById("bowl-5-name").innerHTML = team2[4].name;
     document.getElementById("bowl-6-no").innerHTML = team2[5].number;
     document.getElementById("bowl-6-name").innerHTML = team2[5].name;
+    /**
+    var selectTag = document.createElement("select");
+    for (var i = 0; i < team2.length; i++) {
+        var option = team2[i];
+        selectTag.options.add(new option(option.number, option.name));
+    }
+    */
 
     document.getElementById("start-innings").style.backgroundColor = "#D3D3D3";
     document.getElementById("start-innings").style.color = "#000000";
     document.getElementById("start-innings").style.borderColor = "#000000";
     document.getElementById("start-innings").disabled = true;
-
-    
 
 console.log(activeBats);
 console.log(team1);

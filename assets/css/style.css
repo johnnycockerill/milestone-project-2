@@ -65,6 +65,11 @@ body {
     font-weight: bold;
 }
 
+.bold {
+    color: black;
+    font-weight: bold;
+}
+
 #start-innings {
     background-color: red;
     color: white;
