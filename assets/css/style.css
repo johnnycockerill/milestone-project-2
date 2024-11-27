@@ -15,9 +15,19 @@ button {
     border-color: red;
 }
 
+.red-button:hover {
+    border-color: blue;
+    transition: 0.6s;
+}
+
 .wicket-button {
     background-color: red;
     color: white;
+}
+
+.wicket-button:hover {
+    background-color: blue;
+    transition: 0.6s;
 }
 
 /* --------- Heading */
@@ -101,4 +111,36 @@ button {
     border-color: black;
     color: black;
     background-color: grey;
+}
+
+/** -------- media queries */
+@media only screen and (max-width: 600px) {
+    .scores-area {
+        width: 100%;
+        line-height: 2px;
+    }
+
+    #teams-heading {
+        line-height: 3px;
+        font-size: 2rem;
+    }
+
+    .h-team {
+        float: none;
+    }
+
+    .a-team {
+        float: none;
+    }
+
+    .controls-area button {
+        margin-right: 0.5rem;
+    }
+
+    #bowling-table {
+        width: 80vw;
+        margin: auto;
+        height: auto;
+        line-height: 1rem;
+    }
 }
