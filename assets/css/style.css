@@ -11,6 +11,15 @@ button {
     border-radius: 0.5rem;
 }
 
+.red-button {
+    border-color: red;
+}
+
+.wicket-button {
+    background-color: red;
+    color: white;
+}
+
 /* --------- Heading */
 
 .heading {
