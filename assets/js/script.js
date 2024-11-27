@@ -29,9 +29,6 @@ window.addEventListener("load", function teamInput () {
     let hTeam = prompt("Batting Team: ", "");
     let aTeam = prompt("Fielding Team: ", "");
 
-    
-    
-
     if (hTeam != null) {
         let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
         this.document.getElementById("home-team").innerHTML = hTeamC;
@@ -48,6 +45,9 @@ window.addEventListener("load", function teamInput () {
         let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
         this.document.getElementById("away-team-team").innerHTML = aTeamC;
     }
+
+    document.getElementsByClassName("red-button").disabled = true;
+    document.getElementsByClassName("wicket-button").disabled = true;
 
     console.log(hTeam);
     console.log(aTeam);
@@ -128,6 +128,13 @@ function startInnings () {
     document.getElementById("start-innings").style.color = "#000000";
     document.getElementById("start-innings").style.borderColor = "#000000";
     document.getElementById("start-innings").disabled = true;
+
+    
+    document.getElementsByClassName("red-button").disabled = false;
+    document.getElementsByClassName("wicket-button").disabled = false;
+    document.getElementsByClassName("wicket-button").style.backgroundColor = "#FF0000";
+    document.getElementsByClassName("wicket-button").style.color = "#000000";
+    document.getElementsByClassName("red-button").style.borderColor = "#FF0000";
 
 console.log(activeBats);
 console.log(activeBowl);
