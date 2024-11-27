@@ -28,18 +28,27 @@ wicketsButton.addEventListener("click", wicket);
 window.addEventListener("load", function teamInput () {
     let hTeam = prompt("Batting Team: ", "");
     let aTeam = prompt("Fielding Team: ", "");
+
+    
+    
+
     if (hTeam != null) {
-        this.document.getElementById("home-team").innerHTML = hTeam;
+        let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
+        this.document.getElementById("home-team").innerHTML = hTeamC;
     }
     if (hTeam != null) {
-        this.document.getElementById("home-team-team").innerHTML = hTeam;
+        let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
+        this.document.getElementById("home-team-team").innerHTML = hTeamC;
     }
     if (aTeam != null) {
-        this.document.getElementById("away-team").innerHTML = aTeam;
+        let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
+        this.document.getElementById("away-team").innerHTML = aTeamC;
     }
     if (aTeam != null) {
-        this.document.getElementById("away-team-team").innerHTML = aTeam;
+        let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
+        this.document.getElementById("away-team-team").innerHTML = aTeamC;
     }
+
     console.log(hTeam);
     console.log(aTeam);
 });
@@ -53,11 +62,13 @@ let team2 = [];
 window.addEventListener("load", function submitTeam () {
 
     for (let ii = 0; ii < 6; ii++) {
-    let player = prompt("Name of ", "batter");
+    let playerL = prompt("Name of ", "batter");
+    let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
     team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
 }
     for (let ii = 0; ii < 6; ii++) {
-    let player = prompt("Name of ", "fielder");
+    let playerL = prompt("Name of ", "fielder");
+    let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
     team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
 }
 console.log(team1);
