@@ -1,14 +1,14 @@
-# Mile Stone Project 1 - JC's Gym
+# Mile Stone Project 2 - Cricket Scorebook
 
-For my Milestone Project 1 I have decided to create a three page, front end site for a fictitious Gym that has affiliations with the local Cricket team.
+For my Milestone Project 2 I am creating an interactive front end website.  This will use JavaScript to allow a user to score a cricket match.
 
-JC's Gym is a located in a rural village in East Riding of Yorkshire on the same premises os the local village Cricket team.  It provides members with fitness classes and access to gym equipment.
+For this instance the scoring will be to simulate a 6-aside 10 over match.
 
-The purpose of the site is to attract new members to sign up to the Gym classes or show interest in joining the cricket team.
+The purpose of the site is to allow a quick and easy method to score a match, requiring as few commands from the user as possible.
 
 [Visit deployed website](https://johnnycockerill.github.io/milestone_project_1/)
 
-<img src="assets/images/intro.JPG">
+<img src="assets/images/screenshot.JPG">
 
 ## Table of Contents
 1. [User Experience (UX)](#user-experience-ux)
@@ -47,36 +47,27 @@ The purpose of the site is to attract new members to sign up to the Gym classes 
 
 ### Project Goals
 
-- The website should have a calm, friemdly feel to design.
+- The website should have a calm, mellow look.  The user could potentially be using the site for prolonged periods so should be easy on the eyes.
 
-- The range of fitness classes should be clear and easily accessible.
+- The range of options/controls should be clear and unambiguous, there could be a range of IT profiencies from users.
 
-- Provide information that can lead to future involvement with the gym or cricket team.
+- Ultimately the site should detail the scores and winners of a cricket match.
 
 ### User Stories
 
-- As a customer, I want to be able to navigate the website intuitively and learn more about the gym and cricket team.
+- As a user, I want to be able to navigate the controls intuitively and know which option to choose.
 
-- As a customer, I want to be able to browse the schedule of bookable fitness classes.
+- As a user, I want to be able to clearly know how to start and end a match scoring event.
 
-- As a customer, I want to be able to register my interest with the local cricket team.
-
-- As a customer, I want to be able to register interest for my child with the local junior team setup.
-
-- As a customer, I want to find social media links to the business.
-
-- As a customer, I want to easily find the contact information for the gym/team.
+- As a user, I want to be able to see the live score as well as individuals peformances.
 
 ### Color Scheme
 
-!needs finishing!
-
-The colors used in the site reflect the teams logo of maroon (rgb(104, 10, 49)) and yellow (rgb(247, 211, 51)), these have been used for content titles and borders.
-
+The primary colour used is a pastel grey (#445361), used purposely as an colour which is easy on the eyes in the event of prolonged use, but still allows for clear definition of the active area of the site.
 
 ### Typography
 
-The main font used in the site is Roboto, with Exo as the fallback font in case Roboto is not being imported correctly.
+The main font used in the site is Raleway, with Sans-Serif as the fallback font in case Raleway is not being imported correctly.
 
 ### Wireframes
 
@@ -97,23 +88,20 @@ The main font used in the site is Roboto, with Exo as the fallback font in case 
 
 ### General
 
-- Responsive design across all device sizes.
+- Responsive design across multiple device sizes.
 - Consistent colour scheme and design across all pages to enhance the user's navigation through the content.
 
 #### Header
 
-- The header contains the business name in the colour scheme of the team and a fully responsive navigation bar positioned below the hero image.
+- The header contains the business name, in this instance it is also the purpose of site.
 
-- The header contains the page title in the consistent colour scheme and style to provide familiarity across all pages.
-
-- The navigation bar is identical in all pages and contains links to all pages to facilitate navigation across the site. It includes also an active hover effect to provide feedback to the customer for a better user experience.
+- The header contains an interactive element, upon beginning the scoring process the page title will update to display the team names entered by the user.
 
 - The business name and page title will adjust in size and scale across screen sizes.
 
 #### Footer
 
-- The footer includes links to social sites, facebook, instagram etc.  Also has links to teams league page, direct link to map location, landing and contact page.
-- The footer is positioned at the bottom of the page and is always visible to aid immediate navigation.
+- The footer includes link to teams league page.
 
 ### Landing Page
 
@@ -136,40 +124,6 @@ The main font used in the site is Roboto, with Exo as the fallback font in case 
 
 - Positioned at the bottom of the page is a live Google maps link showing the location of the premises.
 - This section of the page has a direct link present in the footer of every page.
-
-### Class Schedule Page
-
-#### Welcome Image
-
-- The welcome image is the same as the other pages to aid familiarity with the user, only the page title changes however retains the same colour scheme and style.
-
-#### Class Schedule
-
-- The main section of this page contains a table and simple form.
-    - The table shows the days, times and types of different available fitness classes.
-    - The user can select any number of classes, all classes are labelled and colour coordinated.
-    - The form requires the customer to input name and email to book chosen classes.
-    - On screen sizes below 480px the text appears as shorthand with a legend to further clarify the classes depited within the table.
-
-### Contact Page
-
-#### Welcome Image
-
-- The welcome image is the same as the other pages to aid familiarity with the user, only the page title changes however retains the same colour scheme and style.
-
-#### Main Content
-
-- The content for the contact page is plit into three sections.
-    - First section gives the user the opportunity to register interest in the team by completing a simple form.  The form is supported by an image of the playing field.
-    - Second section gives the user the opportunity to register interest in the team on behalf of a minor by completing a form.  Supporeted by a video of training.
-    - Third section presents the user with some direct contact information for the team chairman and captain.  Supported by images of the individuals to aid familiarity.
-
-### Features left to be implemented in future releases
-
-- Add animations to the welcome image.
-- The ability to pay for classes or a gym membership.
-    - This could extend to the ability to log into the site as a paid member.
-- A link to the team shop, or the option to buy team merchandise directly from the site.
 
 ### Technologies Used
 

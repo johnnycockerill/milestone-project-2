@@ -1,3 +1,7 @@
+/**
+ * python3 -m http.server
+ */
+
 const startButton = document.getElementById("start-innings");
 startButton.addEventListener("click", startInnings);
 
