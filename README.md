@@ -6,7 +6,7 @@ For this instance the scoring will be to simulate a 6-aside 10 over match.
 
 The purpose of the site is to allow a quick and easy method to score a match, requiring as few commands from the user as possible.
 
-[Visit deployed website](https://johnnycockerill.github.io/milestone_project_1/)
+[Visit deployed website](https://johnnycockerill.github.io/milestone-project-2/)
 
 <img src="assets/images/screenshot.JPG">
 
