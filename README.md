@@ -112,23 +112,27 @@ The main font used in the site is Raleway, with Sans-Serif as the fallback font 
 
 #### Main Content
 
-- The main content is split into two parts.
-    - Firstly a section briefly describing the benefits for fitness and being healthy supported by a motivational image.
-    - Second section is aimed at inspiring new customers to get involved, in the gym, classes or training with the team.  Supported by an image.
+- The main content is centred on the page.
+    - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
+    - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
 
-#### Image Carousel
+#### Begin Process
 
-- Positioned below the main content is an image carousel of the team's players, aiming to provide familiarity between the team and customers looking to train with the team.
+- Positioned below page title and above all other content will be a button labelled 'start innings', at this stage the button will be highlighted red to indicate this as a start point.  
+- All other buttons will be grayed out and disabled to prevent the user calling functions in an order that would flaw the process.
 
-#### Map Location
+#### Main Purpose
 
-- Positioned at the bottom of the page is a live Google maps link showing the location of the premises.
-- This section of the page has a direct link present in the footer of every page.
+- Located in the centre of the page is the active area
+  - This area holds a section detailing the active bowler and bats live statistics as well as the overall team total.
+  - Below stats area is a series of buttons allowing the user to perform actions relating to a cricket match which will update the scores.
+  - Located at the bottom of the active area is a section detailing all bowlers statistics as the match progresses. This area also shows the bats scores as they have been dismissed.
 
 ### Technologies Used
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://simple.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries and Programs Used
 
@@ -154,29 +158,19 @@ The main font used in the site is Raleway, with Sans-Serif as the fallback font 
 
 ### Testing User Stories
 
-- As a customer, I want to be able to navigate the website intuitively and learn more about the gym and cricket team.
+- As a customer, I want to be able to navigate the website and controls intuitively.
     - The website has an intuitive, consistent structure and design allowing for easy navigation.
-    - The nav and footer bar are present and consistent across all pages allowing for quick and simple navigation to key areas of the site.
+    - All similar command buttons are located in the same area of the page, buttons carrying a different style of function are styled to appear different
 
-- As a customer, I want to be able to browse the schedule of bookable fitness classes.
-    - The class schedule page has a direct link from the nav bar.
-    - The class schedule page has a clear and colour coordinated format allowing for easily understood information.
+- As a customer, I want to be able to determine the outcome of a cricket match using this app.
+    - The page will dtermine a winner based on the users input throughout the process.
 
-- As a customer, I want to be able to register my interest with the local cricket team.
-    - There is a direct link within the nav bar and footer to the contact page.
-    - Within the contact screen there is a simple form to send your details to the team.
+- As a customer, I want to be able to clearly see how individual players performed.
+    - There is a section of the page which shows the bowlers stats throughout the entire innings.
+    - There is a section of the page which details bats scores who have already been dismissed as well as displaying the two active bats within the active scores area of the page.
 
-- As a customer, I want to be able to register interest for my child with the local junior team setup.
-    - There is a direct link within the nav bar and footer to the contact page.
-    - Within the contact screen there is a simple form to send your details to the team.
-
-- As a customer, I want to find social media links to the business.
-    - Social media links are present within the footer on every page.
-
-- As a customer, I want to easily find the contact information for the gym/team.
-    - Direct contact information can be found on the contact page.
-    - Location of the premises can be found on the landing page.
-    - A direct link to both the conatct page and the location is always present within the footer.
+- As a customer, I want to be able to have control of the input to allow for every action on the field.
+    - The range of controls allows for user inputs in a clear and concise manner, mostly from one click.
 
 ### Code Validation
 
@@ -269,16 +263,11 @@ The main font used in the site is Raleway, with Sans-Serif as the fallback font 
 
 ### Content
 
-- Content is either my own fictional work or courtesy of Newport CC.
+- Content my own fictional work.
 
 ### Media
 
 * [Hero Image - Aberdeen Sports Village](https://www.aberdeensportsvillage.com/imager/images/3463/20190831_AberdeenSportsVillage_NewGym_002_eaf97de94269862e8bb6a5cf5fce55e2.webp)
-* [Allstars Image - ECB](https://www.resources.ecb.co.uk/photo-resources/2023/04/17/b00bf8bc-39fb-4270-bd31-62bfbc885057/all-stars-hero-bg-x2.jpeg?width=1766&height=608)
-* [Involved Image - YMCA](https://www.ymca.org/sites/default/files/styles/portrait/public/2021-06/strengthening-communities.jpg?itok=FRTI2Wrh)
-* [Training Video](https://www.youtube.com/watch?v=BTUEz0xkbdI)
-
-- All other images are courtesy of Newport CC
 
 ### Code
 
