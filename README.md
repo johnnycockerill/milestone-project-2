@@ -1,131 +1,339 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Mile Stone Project 1 - JC's Gym
 
-Welcome johnny cockerill,
+For my Milestone Project 1 I have decided to create a three page, front end site for a fictitious Gym that has affiliations with the local Cricket team.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+JC's Gym is a located in a rural village in East Riding of Yorkshire on the same premises os the local village Cricket team.  It provides members with fitness classes and access to gym equipment.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The purpose of the site is to attract new members to sign up to the Gym classes or show interest in joining the cricket team.
 
-## Gitpod Reminders
+[Visit deployed website](https://johnnycockerill.github.io/milestone_project_1/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<img src="assets/images/intro.JPG">
 
-`python3 -m http.server`
+## Table of Contents
+1. [User Experience (UX)](#user-experience-ux)
+    1. [Project Goals](#project-goals)
+    2. [User Stories](#user-stories)
+    3. [Color Scheme](#color-scheme)
+    4. [Typography](#typography)
+    5. [Wireframes](#wireframes)
+2. [Features](#features)
+    1. [General](#general)
+    2. [Landing Page](#landing-page)
+    3. [Class Page](#class-page)
+    4. [Contact Page](#contact-page)
+    5. [Not Implemented](#features-left-to-be-implemted-in-future-releases)
+3. [Technologies Used](#technologies-used)
+    1. [Languages Used](#languages-used)
+    2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+4. [Testing](#testing)
+    1. [Testing User Stories](#testing-user-stories)
+    2. [Code Validation](#code-validation)
+    3. [Accessibility](#accessibility)
+    4. [Tools Testing](#tools-testing)
+    5. [Manual Testing](#manual-testing)
+5. [Finished Product](#finished-product)
+6. [Deployment](#deployment)
+    - [Github Pages](#github-pages)
+7. [Credits](#credits)
+    1. [Content](#content)
+    2. [Media](#media)
+    3. [Code](#code)
+8. [Acknowledgements](#acknowledgements)
 
-A blue button should appear to click: _Make Public_,
+***
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### Project Goals
 
-A blue button should appear to click: _Make Public_,
+- The website should have a calm, friemdly feel to design.
 
-Another blue button should appear to click: _Open Browser_.
+- The range of fitness classes should be clear and easily accessible.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Provide information that can lead to future involvement with the gym or cricket team.
 
-To log into the Heroku toolbelt CLI:
+### User Stories
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- As a customer, I want to be able to navigate the website intuitively and learn more about the gym and cricket team.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- As a customer, I want to be able to browse the schedule of bookable fitness classes.
 
-### Connecting your Mongo database
+- As a customer, I want to be able to register my interest with the local cricket team.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+- As a customer, I want to be able to register interest for my child with the local junior team setup.
 
-------
+- As a customer, I want to find social media links to the business.
 
-## Release History
+- As a customer, I want to easily find the contact information for the gym/team.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Color Scheme
 
-**June 18, 2024,** Add Mongo back into template
+!needs finishing!
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+The colors used in the site reflect the teams logo of maroon (rgb(104, 10, 49)) and yellow (rgb(247, 211, 51)), these have been used for content titles and borders.
 
-**May 28 2024:** Fix Mongo and Links installs
 
-**April 26 2024:** Update node version to 16
+### Typography
 
-**September 20 2023:** Update Python version to 3.9.17.
+The main font used in the site is Roboto, with Exo as the fallback font in case Roboto is not being imported correctly.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Wireframes
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<details>
+  <summary>Expand Index Page Wireframe</summary>
+  <img src="assets/wireframes/Index.png">
+</details>
+<details>
+  <summary>Expand Class Page Wireframe</summary>
+  <img src="assets/wireframes/Class_Schedule.png">
+</details>
+<details>
+  <summary>Expand Contact Page Wireframe</summary>
+  <img src="assets/wireframes/Contact.png">
+</details>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Features
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### General
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Responsive design across all device sizes.
+- Consistent colour scheme and design across all pages to enhance the user's navigation through the content.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Header
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- The header contains the business name in the colour scheme of the team and a fully responsive navigation bar positioned below the hero image.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- The header contains the page title in the consistent colour scheme and style to provide familiarity across all pages.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- The navigation bar is identical in all pages and contains links to all pages to facilitate navigation across the site. It includes also an active hover effect to provide feedback to the customer for a better user experience.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- The business name and page title will adjust in size and scale across screen sizes.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Footer
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- The footer includes links to social sites, facebook, instagram etc.  Also has links to teams league page, direct link to map location, landing and contact page.
+- The footer is positioned at the bottom of the page and is always visible to aid immediate navigation.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Landing Page
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### Welcome Image and Text
 
-------
+- The Welcome main image is designed to attract the customer attention with a motivational feel, however not being too dominating and still allowing for a relaxed feel. The message is particularly aimed at attracting new customers looking for a relaxed village gym.
+- A direct link to the schedule page is immediately provided below the welcome image, to allow returning customers to easily access the range of classes provided.
 
-## FAQ about the uptime script
+#### Main Content
 
-**Why have you added this script?**
+- The main content is split into two parts.
+    - Firstly a section briefly describing the benefits for fitness and being healthy supported by a motivational image.
+    - Second section is aimed at inspiring new customers to get involved, in the gym, classes or training with the team.  Supported by an image.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Image Carousel
 
-**How will this affect me?**
+- Positioned below the main content is an image carousel of the team's players, aiming to provide familiarity between the team and customers looking to train with the team.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### Map Location
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- Positioned at the bottom of the page is a live Google maps link showing the location of the premises.
+- This section of the page has a direct link present in the footer of every page.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Class Schedule Page
 
-**So….?**
+#### Welcome Image
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- The welcome image is the same as the other pages to aid familiarity with the user, only the page title changes however retains the same colour scheme and style.
 
-**Can I opt out?**
+#### Class Schedule
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- The main section of this page contains a table and simple form.
+    - The table shows the days, times and types of different available fitness classes.
+    - The user can select any number of classes, all classes are labelled and colour coordinated.
+    - The form requires the customer to input name and email to book chosen classes.
+    - On screen sizes below 480px the text appears as shorthand with a legend to further clarify the classes depited within the table.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Contact Page
 
-**Anything more?**
+#### Welcome Image
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The welcome image is the same as the other pages to aid familiarity with the user, only the page title changes however retains the same colour scheme and style.
 
----
+#### Main Content
 
-Happy coding!
+- The content for the contact page is plit into three sections.
+    - First section gives the user the opportunity to register interest in the team by completing a simple form.  The form is supported by an image of the playing field.
+    - Second section gives the user the opportunity to register interest in the team on behalf of a minor by completing a form.  Supporeted by a video of training.
+    - Third section presents the user with some direct contact information for the team chairman and captain.  Supported by images of the individuals to aid familiarity.
+
+### Features left to be implemented in future releases
+
+- Add animations to the welcome image.
+- The ability to pay for classes or a gym membership.
+    - This could extend to the ability to log into the site as a paid member.
+- A link to the team shop, or the option to buy team merchandise directly from the site.
+
+### Technologies Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+### Frameworks, Libraries and Programs Used
+
+* [Google Fonts](https://fonts.googleapis.com/)
+    - Google Fonts was used to import the font Roboto and Exo into the style.css file. This font was used throughout the site.
+
+* [GitPod](https://gitpod.io/)
+     - GitPod was used for writing code, committing, and then pushing to GitHub.
+
+* [GitHub](https://github.com/)
+     - GitHub was used to store the project after pushing.
+
+* [W3C Markup Validator](https://validator.w3.org/)
+    - W3C Markup Validator was used to validate the HTML code.
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    - W3C CSS Validator was used to validate the CSS code.
+
+* [Bootstrap Library](https://getbootstrap.com/docs/4.0/components/carousel/)
+    - Bootstrap was used for the image carousel.
+
+## Testing
+
+### Testing User Stories
+
+- As a customer, I want to be able to navigate the website intuitively and learn more about the gym and cricket team.
+    - The website has an intuitive, consistent structure and design allowing for easy navigation.
+    - The nav and footer bar are present and consistent across all pages allowing for quick and simple navigation to key areas of the site.
+
+- As a customer, I want to be able to browse the schedule of bookable fitness classes.
+    - The class schedule page has a direct link from the nav bar.
+    - The class schedule page has a clear and colour coordinated format allowing for easily understood information.
+
+- As a customer, I want to be able to register my interest with the local cricket team.
+    - There is a direct link within the nav bar and footer to the contact page.
+    - Within the contact screen there is a simple form to send your details to the team.
+
+- As a customer, I want to be able to register interest for my child with the local junior team setup.
+    - There is a direct link within the nav bar and footer to the contact page.
+    - Within the contact screen there is a simple form to send your details to the team.
+
+- As a customer, I want to find social media links to the business.
+    - Social media links are present within the footer on every page.
+
+- As a customer, I want to easily find the contact information for the gym/team.
+    - Direct contact information can be found on the contact page.
+    - Location of the premises can be found on the landing page.
+    - A direct link to both the conatct page and the location is always present within the footer.
+
+### Code Validation
+
+- W3 Validator has highlighted zero errors.
+<details>
+  <summary>Expand W3 Index Validation</summary>
+  <img src="assets/images/index_validation.JPG">
+</details>
+<details>
+  <summary>Expand W3 Class Validation</summary>
+  <img src="assets/images/class_validation.JPG">
+</details>
+<details>
+  <summary>Expand W3 Contact Validation</summary>
+  <img src="assets/images/contact_validation.JPG">
+</details>
+<br>
+
+- W3C Validator shows zero errors with CSS:
+<details>
+  <summary>Expand W3C CSS Validation</summary>
+  <img src="assets/images/css_validation.JPG">
+</details>
+
+### Accessibility
+
+* Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
+<details>
+  <summary>Expand Lighthouse Report Desktop</summary>
+  <img src="assets/images/lighthouse_desktop.jpg">
+</details>
+<details>
+  <summary>Expand Lighthouse Report Mobile</summary>
+  <img src="assets/images/lighthouse_mobile.jpg">
+</details>
+
+### Tools Testing
+
+* Responsiveness
+
+    - [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to check responsiveness of the site pages on different screen sizes.
+    
+    - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+### Manual Testing
+
+* Common Elements Testing
+
+    - All Pages
+        - **Navigation Bar**
+            - Hovering the cursor over nav bar link prompts active effect.
+            - Clicking on the navigation bar's links will bring the customer to the specified page.
+        
+        - **Footer**
+            - Hovering the cursor over nav bar link prompts active effect.
+            - Clicking on the social media links will open the specific website on a new tab.
+
+    - Index Page
+
+        - Image carousel works without input.
+        - clicking on map, opens live Google maps onto correct location.
+
+    - Class Schedule Page
+
+        - Clicking classes ticks the box corresponding to that choice.
+        - Form input requires all fields to have content.
+
+    - Contact Page
+
+        - Both form inputs require all fields to be populated.
+        - The e-mail input field requires the correct e-mail format.
+
+## Finished Product
+
+## Deployment
+
+* This website was developed using [GitPod](https://www.gitpod.io/), which was then committed and pushed to GitHub using the GitPod terminal.
+
+### GitHub Pages
+
+* Here are the steps to deploy this website to GitHub Pages from its GitHub repository:
+
+    1. Log in to GitHub and locate the [GitHub Repository](https://github.com/).
+    2. At the top of the Repository, locate the Settings tab on the menu.
+    3. Scroll down the Settings page until you locate the Pages section.
+    4. Under Build and deployment, select "Deploy from a Branch" from the Source dropdown list.
+    5. Under Branch, select Main and /Root from the relevant dropdown lists, then click Save.
+
+## Credits
+
+### Content
+
+- Content is either my own fictional work or courtesy of Newport CC.
+
+### Media
+
+* [Hero Image - Aberdeen Sports Village](https://www.aberdeensportsvillage.com/imager/images/3463/20190831_AberdeenSportsVillage_NewGym_002_eaf97de94269862e8bb6a5cf5fce55e2.webp)
+* [Allstars Image - ECB](https://www.resources.ecb.co.uk/photo-resources/2023/04/17/b00bf8bc-39fb-4270-bd31-62bfbc885057/all-stars-hero-bg-x2.jpeg?width=1766&height=608)
+* [Involved Image - YMCA](https://www.ymca.org/sites/default/files/styles/portrait/public/2021-06/strengthening-communities.jpg?itok=FRTI2Wrh)
+* [Training Video](https://www.youtube.com/watch?v=BTUEz0xkbdI)
+
+- All other images are courtesy of Newport CC
+
+### Code
+
+* [W3Schools](https://www.w3schools.com/) was consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
+
+* [Bootstrap Library](https://getbootstrap.com/docs/4.0/components/carousel/)
+    - Bootstrap was used for the image carousel.
+
+## Acknowledgements
+
+* My tutor, Rokon, for his tuition.
+* My mentor, Marcel, for his feedback and guidance.
