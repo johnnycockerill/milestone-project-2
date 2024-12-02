@@ -174,6 +174,9 @@ console.log(team1);
 console.log(team2);
 }
 
+let ballCount = 0;
+let overCount = 0;
+
 /**
  * function to choose new bowler at end of over
  */
@@ -216,6 +219,14 @@ function newBowler () {
     activeBowl.shift();
     console.log(team2);
     console.log(activeBowl);
+
+    for(var a = 0; a < team2.length; a++) {
+        for(var b in team2[a].number) {
+            document.getElementById(`bowl-${b}-balls`).innerHTML = team2[b].balls;
+            document.getElementById(`bowl-${b}-runs`).innerHTML = team2[b].runs;
+            document.getElementById(`bowl-${b}-wickets`).innerHTML = team2[b].wickets;
+    }}
+
 }
 
 /**
@@ -228,8 +239,16 @@ function dot () {
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-    if (currentBalls == "6") {
-        newBowler();
+    if (overCount == 9) {
+        endOfInnings();
+    } else {
+        if (ballCount == 5) {
+            ballCount = 0;
+            overCount = overCount + 1;
+            newBowler();
+        } else {
+            ballCount = ballCount + 1;
+        }
     }
 }
     
@@ -263,6 +282,18 @@ function byes () {
             document.getElementById("active-bat-2").innerHTML = object.name;
             document.getElementById("bat-2-score").innerHTML = object.score;
             document.getElementById("bat-2-no").innerHTML = object.number;
+        }
+    }
+
+    if (overCount == 9) {
+        endOfInnings();
+    } else {
+        if (ballCount == 5) {
+            ballCount = 0;
+            overCount = overCount + 1;
+            newBowler();
+        } else {
+            ballCount = ballCount + 1;
         }
     }
 
@@ -311,6 +342,19 @@ function runs () {
             document.getElementById("bat-2-no").innerHTML = object.number;
         }
     }
+
+    if (overCount == 9) {
+        endOfInnings();
+    } else {
+        if (ballCount == 5) {
+            ballCount = 0;
+            overCount = overCount + 1;
+            newBowler();
+        } else {
+            ballCount = ballCount + 1;
+        }
+    }
+
     document.getElementById("total-score").innerText = currentScore + runsValue;
     document.getElementById("active-runs").innerText = currentBowlScore + runsValue;
     document.getElementById("active-balls").innerText = ++currentBalls;
@@ -482,6 +526,18 @@ let currentBalls = parseInt(document.getElementById("active-balls").innerText);
 let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
 document.getElementById("active-balls").innerText = ++currentBalls;
 document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
+if (overCount == 9) {
+    endOfInnings();
+} else {
+    if (ballCount == 5) {
+        ballCount = 0;
+        overCount = overCount + 1;
+        newBowler();
+    } else {
+        ballCount = ballCount + 1;
+    }
+}
 
 console.log(team1);
 console.log(activeBats);
