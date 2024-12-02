@@ -63,8 +63,8 @@ window.addEventListener("load", function teamInput () {
 
 let team1 = [];
 let team2 = [];
-let team3 = [];
-let team4 = [];
+let team3 = [{name: "x", number: 1, score: 0, strike: false}];
+let team4 = [{name: "x", number: 1, balls: 0, runs: 0, wickets: 0, active: false}];
 
 /**
  * function runs with window load to request the players names from the user
@@ -244,7 +244,7 @@ function dot () {
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-    if (overCount == 9) {
+    if (overCount == 10) {
         endOfInnings();
     } else {
         if (ballCount == 5) {
@@ -296,7 +296,7 @@ function byes () {
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-    if (overCount == 9) {
+    if (overCount == 10) {
         endOfInnings();
     } else {
         if (ballCount == 5) {
@@ -354,7 +354,7 @@ function runs () {
     document.getElementById("active-balls").innerText = ++currentBalls;
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-    if (overCount == 9) {
+    if (overCount == 10) {
         endOfInnings();
     } else {
         if (ballCount == 5) {
@@ -485,7 +485,9 @@ function wides () {
     document.getElementById("extras-score").innerText = extrasValue + widesValue;
     document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
 }
-
+/**
+ * function runs if last wicket falls before 10 overs and ends the innings
+ */
 function wicket () {
     if (wicketCount == 4) {
         let dismissalMethod = document.getElementById("wicket").value;
@@ -577,7 +579,7 @@ let currentBallsTotal = parseInt(document.getElementById("active-balls-total").i
 document.getElementById("active-balls").innerText = ++currentBalls;
 document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-if (overCount == 9) {
+if (overCount == 10) {
     endOfInnings();
 } else {
     if (ballCount == 5) {
@@ -596,5 +598,29 @@ console.log(activeBats);
 }
 
 function endOfInnings() {
-    alert("end of innings");
+    team4 = team1;
+    team3 = team2;
+
+console.log(team3);
+console.log(team4);
+
+    for (i = 0; i < 6; i++) {
+        team1[i].name = team4[i].name;
+        team1[i].score = 0;
+        team1[i].strike = false;
+    }
+
+    for (i = 0; i < 6; i++) {
+        team2[i].name = team3[i].name;
+        team2[i].balls = 0;
+        team2[i].runs = 0;
+        team2[i].wickets = 0;
+        team2[i].active = false;
+    }
+
+    startInnings();
+
+console.log(team1);
+console.log(team2);
+
 }
