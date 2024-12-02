@@ -229,7 +229,7 @@ function dot () {
     document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
     if (currentBalls == "6") {
-        newBowler;
+        newBowler();
     }
 }
     
