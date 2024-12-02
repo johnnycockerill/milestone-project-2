@@ -535,18 +535,26 @@ let currentBallsTotal = parseInt(document.getElementById("active-balls-total").i
 document.getElementById("active-balls").innerText = ++currentBalls;
 document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-if (overCount == 9) {
+if (wicketCount == 4) {
     endOfInnings();
-} else {
-    if (ballCount == 5) {
-        ballCount = 0;
-        overCount = overCount + 1;
-        newBowler();
+    if (overCount == 9) {
+        endOfInnings();
     } else {
-        ballCount = ballCount + 1;
-    }
-}
+        if (ballCount == 5) {
+            ballCount = 0;
+            overCount = overCount + 1;
+            wicketCount = wicketCount + 1;
+            newBowler();
+        } else {
+            ballCount = ballCount + 1;
+            wicketCount = wicketCount + 1;
+        }
+}}
 
 console.log(team1);
 console.log(activeBats);
+}
+
+function endOfInnings() {
+    alert("end of innings");
 }
