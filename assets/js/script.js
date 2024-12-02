@@ -485,11 +485,53 @@ function wides () {
     document.getElementById("extras-score").innerText = extrasValue + widesValue;
     document.getElementById("active-runs").innerText = currentBowlScore + widesValue;
 }
+
+function wicket () {
+    if (wicketCount == 4) {
+        let dismissalMethod = document.getElementById("wicket").value;
+
+        let wicketsTotal = parseInt(document.getElementById("total-wickets").innerText);
+        document.getElementById("total-wickets").innerText = ++wicketsTotal;
+        let activeWicketsTotal = parseInt(document.getElementById("active-wkt").innerText);
+        document.getElementById("active-wkt").innerText = ++activeWicketsTotal;
+
+        for (let object of activeBats) {
+            if (object.strike === true) {
+                var paragraph = document.getElementById(`batting-team-${wicketsTotal}`);
+                paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
+            }}
+
+        let currentBalls = parseInt(document.getElementById("active-balls").innerText);
+        let currentBallsTotal = parseInt(document.getElementById("active-balls-total").innerText);
+        document.getElementById("active-balls").innerText = ++currentBalls;
+        document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+        
+        activeBowl[0].balls = document.getElementById("active-balls").innerHTML;
+        activeBowl[0].runs = document.getElementById("active-runs").innerHTML;
+        activeBowl[0].wickets = document.getElementById("active-wkt").innerHTML;
+
+        team2[5] = activeBowl[0];
+
+        for (b = 1; b < team2.length + 1; b++) {
+            for (let object of team2) {
+                if (object.number == b) {
+                    document.getElementById(`bowl-${b}-balls`).innerHTML = object.balls;
+                    document.getElementById(`bowl-${b}-runs`).innerHTML = object.runs;
+                    document.getElementById(`bowl-${b}-wickets`).innerHTML = object.wickets;
+                }
+        }}
+
+        endOfInnings();
+            } else {
+        wicketDecider();
+    } 
+}
+
 /**
  * provides function for updating scorecard with dismissed batsman info and
  * brings in next batsman into active bats array
  */
-function wicket () {
+function wicketDecider () {
     let dismissalMethod = document.getElementById("wicket").value;
 
     let wicketsTotal = parseInt(document.getElementById("total-wickets").innerText);
@@ -535,21 +577,19 @@ let currentBallsTotal = parseInt(document.getElementById("active-balls-total").i
 document.getElementById("active-balls").innerText = ++currentBalls;
 document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
-if (wicketCount == 4) {
+if (overCount == 9) {
     endOfInnings();
-    if (overCount == 9) {
-        endOfInnings();
+} else {
+    if (ballCount == 5) {
+        ballCount = 0;
+        overCount = overCount + 1;
+        wicketCount = wicketCount + 1;
+        newBowler();
     } else {
-        if (ballCount == 5) {
-            ballCount = 0;
-            overCount = overCount + 1;
-            wicketCount = wicketCount + 1;
-            newBowler();
-        } else {
-            ballCount = ballCount + 1;
-            wicketCount = wicketCount + 1;
-        }
-}}
+        ballCount = ballCount + 1;
+        wicketCount = wicketCount + 1;
+    }
+}
 
 console.log(team1);
 console.log(activeBats);
