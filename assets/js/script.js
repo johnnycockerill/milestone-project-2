@@ -63,6 +63,8 @@ window.addEventListener("load", function teamInput () {
 
 let team1 = [];
 let team2 = [];
+let team3 = [];
+let team4 = [];
 
 /**
  * function runs with window load to request the players names from the user
@@ -176,6 +178,7 @@ console.log(team2);
 
 let ballCount = 0;
 let overCount = 0;
+let wicketCount = 0;
 
 /**
  * function to choose new bowler at end of over
@@ -190,15 +193,6 @@ function newBowler () {
     for (let object of team2) {
         if (object.number == activeBowler) {
             object.active = true;
-        }
-    }
-
-    for (let object of team2) {
-        if (object.active === true) {
-            document.getElementById("active-bowl").innerHTML = object.name;
-            document.getElementById("active-balls").innerHTML = object.balls;
-            document.getElementById("active-runs").innerHTML = object.runs;
-            document.getElementById("active-wkt").innerHTML = object.wickets;
         }
     }
 
@@ -220,11 +214,22 @@ function newBowler () {
     console.log(team2);
     console.log(activeBowl);
 
-    for(var a = 0; a < team2.length; a++) {
-        for(var b in team2[a].number) {
-            document.getElementById(`bowl-${b}-balls`).innerHTML = team2[b].balls;
-            document.getElementById(`bowl-${b}-runs`).innerHTML = team2[b].runs;
-            document.getElementById(`bowl-${b}-wickets`).innerHTML = team2[b].wickets;
+    for (let object of activeBowl) {
+        if (object.active === true) {
+            document.getElementById("active-bowl").innerHTML = object.name;
+            document.getElementById("active-balls").innerHTML = object.balls;
+            document.getElementById("active-runs").innerHTML = object.runs;
+            document.getElementById("active-wkt").innerHTML = object.wickets;
+        }
+    }
+
+    for (b = 1; b < team2.length + 1; b++) {
+        for (let object of team2) {
+            if (object.number == b) {
+                document.getElementById(`bowl-${b}-balls`).innerHTML = object.balls;
+                document.getElementById(`bowl-${b}-runs`).innerHTML = object.runs;
+                document.getElementById(`bowl-${b}-wickets`).innerHTML = object.wickets;
+            }
     }}
 
 }
@@ -285,6 +290,12 @@ function byes () {
         }
     }
 
+
+    document.getElementById("total-score").innerText = currentScore + byesValue;
+    document.getElementById("extras-score").innerText = extrasValue + byesValue;
+    document.getElementById("active-balls").innerText = ++currentBalls;
+    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
     if (overCount == 9) {
         endOfInnings();
     } else {
@@ -296,11 +307,6 @@ function byes () {
             ballCount = ballCount + 1;
         }
     }
-
-    document.getElementById("total-score").innerText = currentScore + byesValue;
-    document.getElementById("extras-score").innerText = extrasValue + byesValue;
-    document.getElementById("active-balls").innerText = ++currentBalls;
-    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
 }
 
@@ -343,6 +349,11 @@ function runs () {
         }
     }
 
+    document.getElementById("total-score").innerText = currentScore + runsValue;
+    document.getElementById("active-runs").innerText = currentBowlScore + runsValue;
+    document.getElementById("active-balls").innerText = ++currentBalls;
+    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
+
     if (overCount == 9) {
         endOfInnings();
     } else {
@@ -354,11 +365,6 @@ function runs () {
             ballCount = ballCount + 1;
         }
     }
-
-    document.getElementById("total-score").innerText = currentScore + runsValue;
-    document.getElementById("active-runs").innerText = currentBowlScore + runsValue;
-    document.getElementById("active-balls").innerText = ++currentBalls;
-    document.getElementById("active-balls-total").innerText = ++currentBallsTotal;
 
     console.log(activeBats);
 }
@@ -488,6 +494,8 @@ function wicket () {
 
     let wicketsTotal = parseInt(document.getElementById("total-wickets").innerText);
     document.getElementById("total-wickets").innerText = ++wicketsTotal;
+    let activeWicketsTotal = parseInt(document.getElementById("active-wkt").innerText);
+    document.getElementById("active-wkt").innerText = ++activeWicketsTotal;
 
     for (let object of activeBats) {
         if (object.strike === true) {
