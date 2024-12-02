@@ -7,24 +7,31 @@ startButton.addEventListener("click", startInnings);
 
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
+dotButton.disabled = true;
 
 const runsButton = document.getElementById("runs");
 runsButton.addEventListener("click", runs);
+runsButton.disabled = true;
 
 const byesButton = document.getElementById("byes");
 byesButton.addEventListener("click", byes);
+byesButton.disabled = true;
 
 const widesButton = document.getElementById("wides");
 widesButton.addEventListener("click", wides);
+widesButton.disabled = true;
 
 const noBallByesButton = document.getElementById("no-balls-byes");
 noBallByesButton.addEventListener("click", noBallByes);
+noBallByesButton.disabled = true;
 
 const noBallRunsButton = document.getElementById("no-balls-runs");
 noBallRunsButton.addEventListener("click", noBallRuns);
+noBallRunsButton.disabled = true;
 
 const wicketsButton = document.getElementById("wicket-button");
 wicketsButton.addEventListener("click", wicket);
+wicketsButton.disabled = true;
 
 /**
  * function runs with window load to request the team names from the user
@@ -49,9 +56,6 @@ window.addEventListener("load", function teamInput () {
         let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
         this.document.getElementById("away-team-team").innerHTML = aTeamC;
     }
-
-    document.getElementsByClassName("red-button").disabled = true;
-    document.getElementsByClassName("wicket-button").disabled = true;
 
     console.log(hTeam);
     console.log(aTeam);
@@ -134,11 +138,35 @@ function startInnings () {
     document.getElementById("start-innings").disabled = true;
 
     
-    document.getElementsByClassName("red-button").disabled = false;
-    document.getElementsByClassName("wicket-button").disabled = false;
-    document.getElementsByClassName("wicket-button").style.backgroundColor = "#FF0000";
-    document.getElementsByClassName("wicket-button").style.color = "#000000";
-    document.getElementsByClassName("red-button").style.borderColor = "#FF0000";
+dotButton.disabled = false;
+runsButton.disabled = false;
+byesButton.disabled = false;
+noBallByesButton.disabled = false;
+noBallRunsButton.disabled = false;
+widesButton.disabled = false;
+wicketsButton.disabled = false;
+
+document.getElementById("dot").style.backgroundColor = "#FFFFFF";
+document.getElementById("dot").style.color = "#000000";
+document.getElementById("dot").style.borderColor = "#0000FF";
+document.getElementById("byes").style.backgroundColor = "#FFFFFF";
+document.getElementById("byes").style.color = "#000000";
+document.getElementById("byes").style.borderColor = "#0000FF";
+document.getElementById("runs").style.backgroundColor = "#FFFFFF";
+document.getElementById("runs").style.color = "#000000";
+document.getElementById("runs").style.borderColor = "#0000FF";
+document.getElementById("wides").style.backgroundColor = "#FFFFFF";
+document.getElementById("wides").style.color = "#000000";
+document.getElementById("wides").style.borderColor = "#0000FF";
+document.getElementById("no-balls-runs").style.backgroundColor = "#FFFFFF";
+document.getElementById("no-balls-runs").style.color = "#000000";
+document.getElementById("no-balls-runs").style.borderColor = "#0000FF";
+document.getElementById("no-balls-byes").style.backgroundColor = "#FFFFFF";
+document.getElementById("no-balls-byes").style.color = "#000000";
+document.getElementById("no-balls-byes").style.borderColor = "#0000FF";
+document.getElementById("wicket-button").style.backgroundColor = "#FFFFFF";
+document.getElementById("wicket-button").style.color = "#000000";
+document.getElementById("wicket-button").style.borderColor = "#FF0000";
 
 console.log(activeBats);
 console.log(activeBowl);
