@@ -499,6 +499,8 @@ function wicket () {
 
         for (let object of activeBats) {
             if (object.strike === true) {
+                team4[wicketCount].name = object.name;
+                dismissedBats[wicketCount] = object;
                 var paragraph = document.getElementById(`batting-team-${wicketsTotal}`);
                 paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
             }}
@@ -529,6 +531,8 @@ function wicket () {
     } 
 }
 
+let dismissedBats = [{name: "x", number: 0, score: 0, strike: false}];
+
 /**
  * provides function for updating scorecard with dismissed batsman info and
  * brings in next batsman into active bats array
@@ -543,6 +547,8 @@ function wicketDecider () {
 
     for (let object of activeBats) {
         if (object.strike === true) {
+            team4[wicketCount].name = object.name;
+            dismissedBats[wicketCount] = object;
             var paragraph = document.getElementById(`batting-team-${wicketsTotal}`);
             paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
         }}
@@ -597,6 +603,9 @@ console.log(team1);
 console.log(activeBats);
 }
 
+/**
+ * function to reverse teams and begin 2nd innings
+ */
 function endOfInnings() {
     team4 = team1;
     team3 = team2;
