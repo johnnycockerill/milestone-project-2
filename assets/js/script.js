@@ -63,8 +63,8 @@ window.addEventListener("load", function teamInput () {
 
 let team1 = [];
 let team2 = [];
-let team3 = [{name: "x", number: 1, score: 0, strike: false}];
-let team4 = [{name: "x", number: 1, balls: 0, runs: 0, wickets: 0, active: false}];
+let team3 = [];
+let team4 = [];
 
 /**
  * function runs with window load to request the players names from the user
@@ -499,8 +499,6 @@ function wicket () {
 
         for (let object of activeBats) {
             if (object.strike === true) {
-                team4[wicketCount].name = object.name;
-                dismissedBats[wicketCount] = object;
                 var paragraph = document.getElementById(`batting-team-${wicketsTotal}`);
                 paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
             }}
@@ -515,6 +513,8 @@ function wicket () {
         activeBowl[0].wickets = document.getElementById("active-wkt").innerHTML;
 
         team2[5] = activeBowl[0];
+        team1[4] = activeBats[0];
+        team1[5] = activeBats[1];
 
         for (b = 1; b < team2.length + 1; b++) {
             for (let object of team2) {
@@ -525,13 +525,15 @@ function wicket () {
                 }
         }}
 
+    console.log(team1);
+    console.log(team2);
+
         endOfInnings();
             } else {
         wicketDecider();
     } 
+    
 }
-
-let dismissedBats = [{name: "x", number: 0, score: 0, strike: false}];
 
 /**
  * provides function for updating scorecard with dismissed batsman info and
@@ -547,8 +549,6 @@ function wicketDecider () {
 
     for (let object of activeBats) {
         if (object.strike === true) {
-            team4[wicketCount].name = object.name;
-            dismissedBats[wicketCount] = object;
             var paragraph = document.getElementById(`batting-team-${wicketsTotal}`);
             paragraph.textContent += `${object.name} scored ${object.score} - ${dismissalMethod} by bowler: ${activeBowl[0].name} `; 
         }}
@@ -556,6 +556,7 @@ function wicketDecider () {
     for(var a = 0; a < activeBats.length; a++) {
         for(var b in activeBats[a]) {
             if(activeBats[a][b] === true) {
+                team1[4] = activeBats[a];
                 activeBats.splice(a, 1);
                 a--;
                 break;
@@ -607,29 +608,33 @@ console.log(activeBats);
  * function to reverse teams and begin 2nd innings
  */
 function endOfInnings() {
-    team4 = team1;
-    team3 = team2;
 
-console.log(team3);
-console.log(team4);
-
-    for (i = 0; i < 6; i++) {
-        team1[i].name = team4[i].name;
-        team1[i].score = 0;
-        team1[i].strike = false;
-    }
+for (a = 0; a < 6; a++) {
+    for (let object of team1) {
+        if (object.number = a) {
+            team4[a].name = team1[a].name;
+            team4[a].number = team1[a].number;
+            team4[a].score = team1[a].score;
+            team4[a].strike = false;    
+}}}
 
     for (i = 0; i < 6; i++) {
-        team2[i].name = team3[i].name;
-        team2[i].balls = 0;
-        team2[i].runs = 0;
-        team2[i].wickets = 0;
-        team2[i].active = false;
+        team3[i].name = team2[i].name;
+        team3[i].number = team2[i].number;
+        team3[i].balls = team2[i].balls;
+        team3[i].runs = team2[i].runs;
+        team3[i].wickets = team2[i].wickets;
+        team3[i].active = false;
     }
-
-    startInnings();
 
 console.log(team1);
 console.log(team2);
+console.log(team3);
+console.log(team4);
+
+document.getElementById("start-innings").style.backgroundColor = "#FF0000";
+document.getElementById("start-innings").style.color = "#FFFFFF";
+document.getElementById("start-innings").style.borderColor = "#FF0000";
+document.getElementById("start-innings").disabled = false;
 
 }
