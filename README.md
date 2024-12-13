@@ -8,15 +8,16 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 
 [Visit deployed website](https://johnnycockerill.github.io/milestone-project-2/)
 
-<img src="assets/images/screenshot.JPG">
+<img src="assets/images/combined_screenshot.JPG">
 
 ## Table of Contents
 1. [User Experience (UX)](#user-experience-ux)
     1. [Project Goals](#project-goals)
-    2. [User Stories](#user-stories)
-    3. [Color Scheme](#color-scheme)
-    4. [Typography](#typography)
-    5. [Wireframes](#wireframes)
+    2. [Target Audience](#target-audience)
+    3. [User Goals](#user-goals)
+    4. [Color Scheme](#color-scheme)
+    5. [Typography](#typography)
+    6. [Wireframes](#wireframes)
 2. [Features](#features)
     1. [General](#general)
     2. [Landing Page](#landing-page)
@@ -53,7 +54,14 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 
 - Ultimately the site should detail the scores and winners of a cricket match.
 
-### User Stories
+### Target Audience
+
+- The website is functional for a purpose, so would be used by any user looking to perform the function of scoring a cricket match.  With that in mind there are several aspects to consider:
+    - The user could be of any gender, so appearances should remain neutral.
+    - The user could be from any age range, so should not be cater for lighter colours for more lederly users.  Will also be considerate that minors may well use the site.
+    - Whilst the website is intended to be as easy to use as possible, it is highly likely that the user will have a fair to strong understanding of cricket.
+
+### User Goals
 
 - As a user, I want to be able to navigate the controls intuitively and know which option to choose.
 
@@ -63,11 +71,18 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 
 ### Color Scheme
 
-The primary colour used is a pastel grey (#445361), used purposely as an colour which is easy on the eyes in the event of prolonged use, but still allows for clear definition of the active area of the site.
+The primary colour used is a pastel grey (#E6ECF0), used purposely as an colour which is easy on the eyes in the event of prolonged use, but still allows for clear definition of the active area of the site.
+
+<details>
+  <summary>Expand Colour #E6ECF0</summary>
+  <img src="assets/images/colour_choice.JPG">
+</details>
 
 ### Typography
 
 The main font used in the site is Raleway, with Sans-Serif as the fallback font in case Raleway is not being imported correctly.
+
+The primary colour of for typography is a dark grey (#445361), following the same principles of the rest of the page would be easier on the eyes than black.
 
 ### Wireframes
 
