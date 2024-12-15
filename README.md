@@ -122,13 +122,27 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 #### Welcome Image and Text
 
-- The Welcome main image is designed to attract the customer attention with a motivational feel, however not being too dominating and still allowing for a relaxed feel. The message is particularly aimed at attracting new customers looking for a relaxed village gym.
-- A direct link to the schedule page is immediately provided below the welcome image, to allow returning customers to easily access the range of classes provided.
+- The Welcome main image is designed to state the nature and purpose of the website.  It has been designed to a colour and size to contrast against the background and stand out.
+- After first interaction with the website the welcome image will update to display the names of the two teams inputed by the user, these will update to have first letter capitalised regardless of how the user inputs.
+
+<details>
+  <summary>Expand Team Name Input</summary>
+  <img src="assets/images/team1_choice_screenshot.JPG">
+</details>
+<details>
+  <summary>Expand Team Name Input</summary>
+  <img src="assets/images/team2_choice_screenshot.JPG">
+</details>
+<details>
+  <summary>Expand Team Name's Displayed</summary>
+  <img src="assets/images/team_name_screenshot.JPG">
+</details>
 
 #### Main Content
 
 - The main content is centred on the page.
     - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
+    - These required prompts run without user interaction once the window has loaded.
     - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
 
 #### Begin Process
