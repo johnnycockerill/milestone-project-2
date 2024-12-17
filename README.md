@@ -87,16 +87,8 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 ### Wireframes
 
 <details>
-  <summary>Expand Index Page Wireframe</summary>
-  <img src="assets/wireframes/Index.png">
-</details>
-<details>
-  <summary>Expand Class Page Wireframe</summary>
-  <img src="assets/wireframes/Class_Schedule.png">
-</details>
-<details>
-  <summary>Expand Contact Page Wireframe</summary>
-  <img src="assets/wireframes/Contact.png">
+  <summary>Expand Wireframe</summary>
+  <img src="assets/images/wireframe_image.png">
 </details>
 
 ## Features
@@ -126,14 +118,6 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 - After first interaction with the website the welcome image will update to display the names of the two teams inputed by the user, these will update to have first letter capitalised regardless of how the user inputs.
 
 <details>
-  <summary>Expand Team Name Input</summary>
-  <img src="assets/images/team1_choice_screenshot.JPG">
-</details>
-<details>
-  <summary>Expand Team Name Input</summary>
-  <img src="assets/images/team2_choice_screenshot.JPG">
-</details>
-<details>
   <summary>Expand Team Name's Displayed</summary>
   <img src="assets/images/team_name_screenshot.JPG">
 </details>
@@ -141,21 +125,65 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 #### Main Content
 
 - The main content is centred on the page.
-    - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
-    - These required prompts run without user interaction once the window has loaded.
-    - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
+  - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
+    <details>
+      <summary>Expand Team Name Input</summary>
+      <img src="assets/images/team1_choice_screenshot.JPG">
+    </details>
+    <details>
+      <summary>Expand Team Name Input</summary>
+      <img src="assets/images/team2_choice_screenshot.JPG">
+    </details>
+  - These required prompts run without user interaction once the window has loaded.
+  - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
+- The live stats area will display 'bat 1', 'bat 2' and 'bowl' as the players names by default prior to beginning main purpose.  This area will display live individual stats and total team score as the game progresses.
+      <img src="assets/images/live_stat_screenshot.JPG">
+
+- The controls area holds a series of buttons and drop-downs linked to buttons.  These are coloured when active and greyed out when disabled to improve user experience and help navigation through the process.
+      <img src="assets/images/buttons.JPG">
+    <details>
+      <summary>Expand Disabled Control Area</summary>
+      <img src="assets/images/disabled_buttons.JPG">
+    </details>
+
+- At the bottom of page are the players stats area.  There are two panes, one for dismissed bats and one for individual bowlers stats which increase as the match progresses.
+  - There is a sub heading for clarity displaying team name above respective players using the data inputted by the user earlier in the process.
+  <img src="assets/images/player_stats.JPG">
+    <details>
+      <summary>Expand Bats Stats</summary>
+      <img src="assets/images/bat_stat_screenshot.JPG">
+    </details>
+    <details>
+      <summary>Expand Bowlers Stats</summary>
+      <img src="assets/images/bowler_stat_screenshot.JPG">
+    </details>
+
+  - These two panes will appear inline vertically on small screen sizes
 
 #### Begin Process
 
-- Positioned below page title and above all other content will be a button labelled 'start innings', at this stage the button will be highlighted red to indicate this as a start point.  
+- Positioned below page title and above all other content will be a button labelled 'start innings', at this stage the button will be highlighted red to indicate this as a start point.
+
+    <details>
+      <summary>Expand View Prior to Beginning Match Process</summary>
+      <img src="assets/images/disabled_buttons_screenshot.JPG">
+    </details>
+
 - All other buttons will be grayed out and disabled to prevent the user calling functions in an order that would flaw the process.
+  - Shading out all inactive buttons will aid the users navigation to next steps.
+
+- Once 'Start Innings' button is clicked,  bowlers names and bat 1 and 2 will update with the data inputted by the user.  A prompt will also appear requesting the user to choose the opening bowler.
+
+    <details>
+      <summary>Expand Bowler Choice</summary>
+      <img src="assets/images/bowler_choice_screenshot.JPG">
+    </details>
+
+  Once selected the bowlers name will appear within the live scores area replacing the default 'bowl' name.
 
 #### Main Purpose
 
-- Located in the centre of the page is the active area
-  - This area holds a section detailing the active bowler and bats live statistics as well as the overall team total.
-  - Below stats area is a series of buttons allowing the user to perform actions relating to a cricket match which will update the scores.
-  - Located at the bottom of the active area is a section detailing all bowlers statistics as the match progresses. This area also shows the bats scores as they have been dismissed.
+- 
 
 ### Technologies Used
 
