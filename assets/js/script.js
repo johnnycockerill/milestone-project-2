@@ -610,6 +610,11 @@ function endOfInnings() {
 let team3 = Array.from(team1);
 let team4 = Array.from(team2);
 
+for (let i = 0; i < 6; i++) {
+    team1[i].name = team4[i].name;
+    team2[i].name = team3[i].name;
+}
+
 console.log(team1);
 console.log(team2);
 console.log(team3);
