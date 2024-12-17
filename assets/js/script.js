@@ -63,8 +63,6 @@ window.addEventListener("load", function teamInput () {
 
 let team1 = [];
 let team2 = [];
-let team3 = [];
-let team4 = [];
 
 /**
  * function runs with window load to request the players names from the user
@@ -609,23 +607,8 @@ console.log(activeBats);
  */
 function endOfInnings() {
 
-for (let a = 0; a < 6; a++) {
-    for (let object of team1) {
-        if (object.number = a) {
-            team4[a].name = team1[a].name;
-            team4[a].number = team1[a].number;
-            team4[a].score = team1[a].score;
-            team4[a].strike = false;    
-}}}
-
-    for (let i = 0; i < 6; i++) {
-        team3[i].name = team2[i].name;
-        team3[i].number = team2[i].number;
-        team3[i].balls = team2[i].balls;
-        team3[i].runs = team2[i].runs;
-        team3[i].wickets = team2[i].wickets;
-        team3[i].active = false;
-    }
+let team3 = Array.from(team1);
+let team4 = Array.from(team2);
 
 console.log(team1);
 console.log(team2);
