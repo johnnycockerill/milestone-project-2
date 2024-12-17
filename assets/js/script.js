@@ -223,7 +223,7 @@ function newBowler () {
         }
     }
 
-    for (b = 1; b < team2.length + 1; b++) {
+    for (let b = 1; b < team2.length + 1; b++) {
         for (let object of team2) {
             if (object.number == b) {
                 document.getElementById(`bowl-${b}-balls`).innerHTML = object.balls;
@@ -516,7 +516,7 @@ function wicket () {
         team1[4] = activeBats[0];
         team1[5] = activeBats[1];
 
-        for (b = 1; b < team2.length + 1; b++) {
+        for (let b = 1; b < team2.length + 1; b++) {
             for (let object of team2) {
                 if (object.number == b) {
                     document.getElementById(`bowl-${b}-balls`).innerHTML = object.balls;
@@ -609,7 +609,7 @@ console.log(activeBats);
  */
 function endOfInnings() {
 
-for (a = 0; a < 6; a++) {
+for (let a = 0; a < 6; a++) {
     for (let object of team1) {
         if (object.number = a) {
             team4[a].name = team1[a].name;
@@ -618,7 +618,7 @@ for (a = 0; a < 6; a++) {
             team4[a].strike = false;    
 }}}
 
-    for (i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) {
         team3[i].name = team2[i].name;
         team3[i].number = team2[i].number;
         team3[i].balls = team2[i].balls;

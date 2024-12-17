@@ -183,7 +183,29 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 #### Main Purpose
 
-- 
+- The user is free to choose any of the buttons to match the play of the match.  
+  Each button updates all necessary stats requiring the user to click once reagrdless of match play.
+
+- After every 6 legal balls (ie, not including wides or no-balls), a prompt will appear, requesting the user choose another bowler.
+    - Note - The current bowler will not be an option for this process.
+      
+      <img src="assets/images/bowler_change_screenshot.JPG">
+
+    Once chosen the new bowler will replace the existing bowler within the active scores area and the previous bowlers stats will be updated with the bowlers stats pane.
+      - Should the bowler have been used already their existing stats will be added to.
+      - The two active bats will be swapped, alternating the 'strike' characteristic.
+
+- Should a bat be dismissed by using the 'wicket' button, the strike bat will be replaced with next bat in the order.
+  - The departing bat's score will be dispalyed in the bats team pane.
+    <details>
+      <summary>Expand Dismissed Bats</summary>
+      <img src="assets/images/bat_stat_screenshot.JPG">
+    </details>
+
+- Whichever occurs first between loosing 5 wickets or reaching 10-overs initiates 'end of innings'.  The total score is logged and the two teams swap, beggining the process from fresh.
+
+- Once a second innings is completed the score is logged.  A function runs to display which team won and their total scores.
+      
 
 ### Technologies Used
 
@@ -207,6 +229,9 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS Validator was used to validate the CSS code.
+
+* [JavaScript Validator](https://jshint.com/)
+    - JSHint JavaScript Validator was used to validate the JS code.
 
 * [Bootstrap Library](https://getbootstrap.com/docs/4.0/components/carousel/)
     - Bootstrap was used for the image carousel.
@@ -233,24 +258,24 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 - W3 Validator has highlighted zero errors.
 <details>
-  <summary>Expand W3 Index Validation</summary>
-  <img src="assets/images/index_validation.JPG">
-</details>
-<details>
-  <summary>Expand W3 Class Validation</summary>
-  <img src="assets/images/class_validation.JPG">
-</details>
-<details>
-  <summary>Expand W3 Contact Validation</summary>
-  <img src="assets/images/contact_validation.JPG">
+  <summary>Expand W3 Index HTML Validation</summary>
+  <img src="assets/images/HTML_Validation.JPG">
 </details>
 <br>
 
 - W3C Validator shows zero errors with CSS:
 <details>
   <summary>Expand W3C CSS Validation</summary>
-  <img src="assets/images/css_validation.JPG">
+  <img src="assets/images/CSS_Validation.JPG">
 </details>
+<br>
+
+- JSHint Validator shows zero errors, however 134 warnings all relating to mozilla browser compatability.
+<details>
+  <summary>Expand JSHint JavaScript Validation</summary>
+  <img src="assets/images/JS_Hint_Validation.JPG">
+</details>
+<br>
 
 ### Accessibility
 
