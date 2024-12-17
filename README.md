@@ -282,11 +282,11 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 * Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
 <details>
   <summary>Expand Lighthouse Report Desktop</summary>
-  <img src="assets/images/lighthouse_desktop.jpg">
+  <img src="assets/images/lighthouse_desktop.JPG">
 </details>
 <details>
   <summary>Expand Lighthouse Report Mobile</summary>
-  <img src="assets/images/lighthouse_mobile.jpg">
+  <img src="assets/images/lighthouse_mobile.JPG">
 </details>
 
 ### Tools Testing
