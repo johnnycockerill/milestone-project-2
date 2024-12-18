@@ -122,6 +122,12 @@ button {
     background-color: grey;
 }
 
+footer a:hover {
+
+    color: red;
+    transition: 0.7s;
+}
+
 /** -------- media queries */
 @media only screen and (max-width: 600px) {
     .scores-area {
