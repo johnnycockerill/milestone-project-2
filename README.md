@@ -21,9 +21,7 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 2. [Features](#features)
     1. [General](#general)
     2. [Landing Page](#landing-page)
-    3. [Class Page](#class-page)
-    4. [Contact Page](#contact-page)
-    5. [Not Implemented](#features-left-to-be-implemted-in-future-releases)
+    3. [Not Implemented](#features-left-to-be-implemted-in-future-releases)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
@@ -68,6 +66,8 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 - As a user, I want to be able to clearly know how to start and end a match scoring event.
 
 - As a user, I want to be able to see the live score as well as individuals peformances.
+
+- As a user, I want to be able to have control of the input to allow for every action on the field.
 
 ### Color Scheme
 
@@ -205,7 +205,11 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 - Whichever occurs first between loosing 5 wickets or reaching 10-overs initiates 'end of innings'.  The total score is logged and the two teams swap, beggining the process from fresh.
 
 - Once a second innings is completed the score is logged.  A function runs to display which team won and their total scores.
-      
+
+### Features Left to be Implemeted in Future Releases
+
+- The website could be linked to the league site, allowing users to view live scoresheets from other matches in the division or league.
+- The team and player data could be part of a collective database, held by league server.
 
 ### Technologies Used
 
@@ -240,9 +244,17 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 ### Testing User Stories
 
+- As a user, I want to be able to clearly know how to start and end a match scoring event.
+  - The website requests necessary data from the user from autoload prompts, eliminating the chance the user will start the process without inputting all required inputs.
+  - To begin the process a button is highlighted red and has hover function whilst this button is active.
+
+- As a user, I want to be able to see the live score as well as individuals peformances.
+  - All team scores and individual scores are visbible at all times whilst the process is live.
+
 - As a customer, I want to be able to navigate the website and controls intuitively.
     - The website has an intuitive, consistent structure and design allowing for easy navigation.
-    - All similar command buttons are located in the same area of the page, buttons carrying a different style of function are styled to appear different
+    - All similar command buttons are located in the same area of the page, buttons carrying a different style of function are styled to appear different.
+    - The website has interactive aids that assist the user, changing colour to highlight the next step or show disabled functions.
 
 - As a customer, I want to be able to determine the outcome of a cricket match using this app.
     - The page will dtermine a winner based on the users input throughout the process.
@@ -253,6 +265,7 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 - As a customer, I want to be able to have control of the input to allow for every action on the field.
     - The range of controls allows for user inputs in a clear and concise manner, mostly from one click.
+    - These controls are colour coordinated by active and disabled.
 
 ### Code Validation
 
@@ -300,30 +313,28 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 ### Manual Testing
 
 * Common Elements Testing
-
-    - All Pages
-        - **Navigation Bar**
-            - Hovering the cursor over nav bar link prompts active effect.
-            - Clicking on the navigation bar's links will bring the customer to the specified page.
         
-        - **Footer**
-            - Hovering the cursor over nav bar link prompts active effect.
-            - Clicking on the social media links will open the specific website on a new tab.
-
     - Index Page
 
-        - Image carousel works without input.
-        - clicking on map, opens live Google maps onto correct location.
+        - Team Name prompts appear without request on all screen sizes. - $${\color{green}PASS}$$
+        - Player Name prompts appear without request. - $${\color{green}PASS}$$
+        - Start innings hover effect works on desktop screen size. - $${\color{green}PASS}$$
+        - All other buttons are grey and have no effect prior to 'start innings function'. - $${\color{green}PASS}$$
+        - Start innings turns grey and has no effect following 'start innings' function- $${\color{green}PASS}$$
+        - 'Start Innings' function produces bowling choice prompt. - $${\color{green}PASS}$$
+        - All buttons produce desired effect, ie, a 'dot' or 'wide' alters the expected data, both visible and within object array. - $${\color{green}PASS}$$
+        - 'Wicket' button produces desired result, replaces strike bat with the next bat on the list, shows the dismissed bat and their score within the correct pane. - $${\color{green}PASS}$$
+        - Every 6th legal ball produces a prompt requesting user to choose an alternative bowler. - $${\color{green}PASS}$$
+        - At bowler change the bats alternate strike. - $${\color{green}PASS}$$
+        - At bowler change the stats are updated in correct pane and active bowler stats are changed. - $${\color{green}PASS}$$
+        - After 5th wicket or 10th over the end of innings is dispalyed with score. - $${\color{red}FAIL - Not-implemented-yet}$$
+        - After end of innings the teams and players names are reversed. - $${\color{red}FAIL - Not-implemented-yet}$$
+        - Second Innings plays out in same way as first. - $${\color{red}FAIL - Not-implemented-yet}$$
+        - After 5th wicket or 10th over of second innings prompt displays total scores and winning team. - $${\color{red}FAIL - Not-implemented-yet}$$
 
-    - Class Schedule Page
-
-        - Clicking classes ticks the box corresponding to that choice.
-        - Form input requires all fields to have content.
-
-    - Contact Page
-
-        - Both form inputs require all fields to be populated.
-        - The e-mail input field requires the correct e-mail format.
+        - **Footer**
+          - Hovering the cursor over nav bar link prompts active effect. $${\color{green}PASS}$$
+          - Clicking on the league site link will open the specific website on a new tab. $${\color{green}PASS}$$
 
 ## Finished Product
 
@@ -345,18 +356,17 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 ### Content
 
-- Content my own fictional work.
+- Content is my own fictional work.
 
 ### Media
 
-* [Hero Image - Aberdeen Sports Village](https://www.aberdeensportsvillage.com/imager/images/3463/20190831_AberdeenSportsVillage_NewGym_002_eaf97de94269862e8bb6a5cf5fce55e2.webp)
+- No images were required for this work, any use of names of individuals is entered bythe user.
 
 ### Code
 
 * [W3Schools](https://www.w3schools.com/) was consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
 
-* [Bootstrap Library](https://getbootstrap.com/docs/4.0/components/carousel/)
-    - Bootstrap was used for the image carousel.
+* [Stack Overflow](https://www.stackoveflow.com/) was consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
 
 ## Acknowledgements
 
