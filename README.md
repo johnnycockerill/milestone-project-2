@@ -73,10 +73,8 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 
 The primary colour used is a pastel grey (#E6ECF0), used purposely as an colour which is easy on the eyes in the event of prolonged use, but still allows for clear definition of the active area of the site.
 
-<details>
-  <summary>Expand Colour #E6ECF0</summary>
-  <img src="assets/images/colour_choice.JPG">
-</details>
+<img src="assets/images/colour_choice.JPG">
+
 
 ### Typography
 
@@ -86,10 +84,8 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 ### Wireframes
 
-<details>
-  <summary>Expand Wireframe</summary>
-  <img src="assets/images/wireframe_image.png">
-</details>
+<img src="assets/images/wireframe_image.png">
+
 
 ## Features
 
@@ -117,46 +113,37 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 - The Welcome main image is designed to state the nature and purpose of the website.  It has been designed to a colour and size to contrast against the background and stand out.
 - After first interaction with the website the welcome image will update to display the names of the two teams inputed by the user, these will update to have first letter capitalised regardless of how the user inputs.
 
-<details>
-  <summary>Expand Team Name's Displayed</summary>
-  <img src="assets/images/team_name_screenshot.JPG">
-</details>
+
+<img src="assets/images/team_name_screenshot.JPG">
+
 
 #### Main Content
 
 - The main content is centred on the page.
   - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
-    <details>
-      <summary>Expand Team Name Input</summary>
-      <img src="assets/images/team1_choice_screenshot.JPG">
-    </details>
-    <details>
-      <summary>Expand Team Name Input</summary>
-      <img src="assets/images/team2_choice_screenshot.JPG">
-    </details>
+
+    <img src="assets/images/team1_choice_screenshot.JPG">
+
+    <img src="assets/images/team2_choice_screenshot.JPG">
+    
   - These required prompts run without user interaction once the window has loaded.
   - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
 - The live stats area will display 'bat 1', 'bat 2' and 'bowl' as the players names by default prior to beginning main purpose.  This area will display live individual stats and total team score as the game progresses.
       <img src="assets/images/live_stat_screenshot.JPG">
 
 - The controls area holds a series of buttons and drop-downs linked to buttons.  These are coloured when active and greyed out when disabled to improve user experience and help navigation through the process.
+      
       <img src="assets/images/buttons.JPG">
-    <details>
-      <summary>Expand Disabled Control Area</summary>
+
       <img src="assets/images/disabled_buttons.JPG">
-    </details>
 
 - At the bottom of page are the players stats area.  There are two panes, one for dismissed bats and one for individual bowlers stats which increase as the match progresses.
   - There is a sub heading for clarity displaying team name above respective players using the data inputted by the user earlier in the process.
   <img src="assets/images/player_stats.JPG">
-    <details>
-      <summary>Expand Bats Stats</summary>
+
       <img src="assets/images/bat_stat_screenshot.JPG">
-    </details>
-    <details>
-      <summary>Expand Bowlers Stats</summary>
+
       <img src="assets/images/bowler_stat_screenshot.JPG">
-    </details>
 
   - These two panes will appear inline vertically on small screen sizes
 
@@ -164,20 +151,16 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 - Positioned below page title and above all other content will be a button labelled 'start innings', at this stage the button will be highlighted red to indicate this as a start point.
 
-    <details>
-      <summary>Expand View Prior to Beginning Match Process</summary>
-      <img src="assets/images/disabled_buttons_screenshot.JPG">
-    </details>
+  <img src="assets/images/disabled_buttons_screenshot.JPG">
 
 - All other buttons will be grayed out and disabled to prevent the user calling functions in an order that would flaw the process.
   - Shading out all inactive buttons will aid the users navigation to next steps.
 
 - Once 'Start Innings' button is clicked,  bowlers names and bat 1 and 2 will update with the data inputted by the user.  A prompt will also appear requesting the user to choose the opening bowler.
 
-    <details>
-      <summary>Expand Bowler Choice</summary>
-      <img src="assets/images/bowler_choice_screenshot.JPG">
-    </details>
+
+  <img src="assets/images/bowler_choice_screenshot.JPG">
+
 
   Once selected the bowlers name will appear within the live scores area replacing the default 'bowl' name.
 
@@ -197,10 +180,9 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 - Should a bat be dismissed by using the 'wicket' button, the strike bat will be replaced with next bat in the order.
   - The departing bat's score will be dispalyed in the bats team pane.
-    <details>
-      <summary>Expand Dismissed Bats</summary>
+
       <img src="assets/images/bat_stat_screenshot.JPG">
-    </details>
+
 
 - Whichever occurs first between loosing 5 wickets or reaching 10-overs initiates 'end of innings'.  The total score is logged and the two teams swap, beggining the process from fresh.
 
@@ -270,37 +252,28 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 ### Code Validation
 
 - W3 Validator has highlighted zero errors.
-<details>
-  <summary>Expand W3 Index HTML Validation</summary>
+
   <img src="assets/images/HTML_Validation.JPG">
-</details>
 <br>
 
 - W3C Validator shows zero errors with CSS:
-<details>
-  <summary>Expand W3C CSS Validation</summary>
+
   <img src="assets/images/CSS_Validation.JPG">
-</details>
 <br>
 
 - JSHint Validator shows zero errors, however 134 warnings all relating to mozilla browser compatability.
-<details>
-  <summary>Expand JSHint JavaScript Validation</summary>
+
   <img src="assets/images/JS_Hint_Validation.JPG">
-</details>
 <br>
 
 ### Accessibility
 
 * Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
-<details>
-  <summary>Expand Lighthouse Report Desktop</summary>
+
   <img src="assets/images/lighthouse_desktop.JPG">
-</details>
-<details>
-  <summary>Expand Lighthouse Report Mobile</summary>
+
   <img src="assets/images/lighthouse_mobile.JPG">
-</details>
+
 
 ### Tools Testing
 
