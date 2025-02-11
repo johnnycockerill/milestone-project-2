@@ -122,28 +122,28 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 - The main content is centred on the page.
   - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
 
-    <img src="assets/images/team1_choice_screenshot.JPG">
+  <img src="assets/images/team1_choice_screenshot.JPG">
 
-    <img src="assets/images/team2_choice_screenshot.JPG">
+  <img src="assets/images/team2_choice_screenshot.JPG">
     
   - These required prompts run without user interaction once the window has loaded.
   - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
 - The live stats area will display 'bat 1', 'bat 2' and 'bowl' as the players names by default prior to beginning main purpose.  This area will display live individual stats and total team score as the game progresses.
-      <img src="assets/images/live_stat_screenshot.JPG">
+  <img src="assets/images/live_stat_screenshot.JPG">
 
 - The controls area holds a series of buttons and drop-downs linked to buttons.  These are coloured when active and greyed out when disabled to improve user experience and help navigation through the process.
       
-      <img src="assets/images/buttons.JPG">
+  <img src="assets/images/buttons.JPG">
 
-      <img src="assets/images/disabled_buttons.JPG">
+  <img src="assets/images/disabled_buttons.JPG">
 
 - At the bottom of page are the players stats area.  There are two panes, one for dismissed bats and one for individual bowlers stats which increase as the match progresses.
   - There is a sub heading for clarity displaying team name above respective players using the data inputted by the user earlier in the process.
   <img src="assets/images/player_stats.JPG">
 
-      <img src="assets/images/bat_stat_screenshot.JPG">
+  <img src="assets/images/bat_stat_screenshot.JPG">
 
-      <img src="assets/images/bowler_stat_screenshot.JPG">
+  <img src="assets/images/bowler_stat_screenshot.JPG">
 
   - These two panes will appear inline vertically on small screen sizes
 
