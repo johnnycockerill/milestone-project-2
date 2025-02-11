@@ -129,7 +129,7 @@ footer a:hover {
 }
 
 a img {
-    width: 33%;
+    width: 17%;
     height: auto;
 }
 
@@ -162,5 +162,9 @@ a img {
         margin: auto;
         height: auto;
         line-height: 1rem;
+    }
+
+    a img {
+        width: 60%;
     }
 }

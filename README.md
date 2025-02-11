@@ -333,7 +333,7 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 ### Media
 
-- No images were required for this work, any use of names of individuals is entered bythe user.
+* [League Website - Play Cricket (ECB)](https://s3-eu-west-1.amazonaws.com/pc-static.ecb.co.uk/images/logo.png)
 
 ### Code
 
