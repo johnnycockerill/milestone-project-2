@@ -53,20 +53,9 @@ function dataInput () {
     document.getElementById("data-entry").style.borderColor = "#000000";
     document.getElementById("data-entry").disabled = true;
 
-    for (let ii = 0; ii < 6; ii++) {
-        let playerL = prompt("Name of ", "batter");
-        let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
-        team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
-    }
-        for (let ii = 0; ii < 6; ii++) {
-        let playerL = prompt("Name of ", "fielder");
-        let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
-        team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
-    }
-
     if (hTeam != null) {
         let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
-        this.document.getElementById("home-team").innerHTML = hTeamC;
+        document.getElementById("home-team").innerHTML = hTeamC;
     }
     if (hTeam != null) {
         let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
@@ -79,6 +68,17 @@ function dataInput () {
     if (aTeam != null) {
         let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
         this.document.getElementById("away-team-team").innerHTML = aTeamC;
+    }
+
+    for (let ii = 0; ii < 6; ii++) {
+        let playerL = prompt("Name of ", "batter");
+        let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
+        team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
+    }
+        for (let ii = 0; ii < 6; ii++) {
+        let playerL = prompt("Name of ", "fielder");
+        let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
+        team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
     }
 
     console.log(hTeam);
