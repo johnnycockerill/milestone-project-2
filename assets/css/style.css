@@ -17,8 +17,6 @@ button {
     border-width: 0.3rem;
 }
 
-
-
 .wicket-button {
     background-color: #D3D3D3;
     border-color: black;
@@ -49,6 +47,11 @@ button {
 }
 
 /* --------- Page layout */
+
+#intro p {
+    max-width: 700px;
+    font-weight: bolder;
+}
 
 .scores-area {
     background-color: #E6ECF0;

@@ -59,24 +59,24 @@ function dataInput () {
     }
     if (hTeam != null) {
         let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
-        this.document.getElementById("home-team-team").innerHTML = hTeamC;
+        document.getElementById("home-team-team").innerHTML = hTeamC;
     }
     if (aTeam != null) {
         let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
-        this.document.getElementById("away-team").innerHTML = aTeamC;
+        document.getElementById("away-team").innerHTML = aTeamC;
     }
     if (aTeam != null) {
         let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
-        this.document.getElementById("away-team-team").innerHTML = aTeamC;
+        document.getElementById("away-team-team").innerHTML = aTeamC;
     }
 
     for (let ii = 0; ii < 6; ii++) {
-        let playerL = prompt(`Please enter the name of No. ${i + 1} batter:`, "batter");
+        let playerL = prompt(`Please enter the name of No. ${ii + 1} batter:`, "batter");
         let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
         team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
     }
         for (let ii = 0; ii < 6; ii++) {
-        let playerL = prompt(`Please enter the name of fielder no. ${i + 1}:`, "fielder");
+        let playerL = prompt(`Please enter the name of fielder no. ${ii + 1}:`, "fielder");
         let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
         team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
     }
@@ -114,7 +114,7 @@ function startInnings () {
         document.getElementById(`bowl-${i+1}-name`).innerHTML = team2[i].name;
     }
 
-    let activeBowler = prompt(`Bowler No.: \n${team2[0].number}   ${team2[0].name} \n ${team2[1].number}   ${team2[1].name} \n ${team2[2].number}   ${team2[2].name} \n ${team2[3].number}   ${team2[3].name} \n ${team2[4].number}   ${team2[4].name} \n ${team2[5].number}   ${team2[5].name}`, "number");
+    let activeBowler = prompt(`Please choose the number corresponding to the opening bowler: \n${team2[0].number}   ${team2[0].name} \n ${team2[1].number}   ${team2[1].name} \n ${team2[2].number}   ${team2[2].name} \n ${team2[3].number}   ${team2[3].name} \n ${team2[4].number}   ${team2[4].name} \n ${team2[5].number}   ${team2[5].name}`, "number");
     for (let object of team2) {
         if (object.number == activeBowler) {
             object.active = true;
