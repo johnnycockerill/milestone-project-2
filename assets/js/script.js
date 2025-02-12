@@ -47,6 +47,11 @@ let team2 = [];
 function dataInput () {
     let hTeam = prompt("Batting Team: ", "");
     let aTeam = prompt("Fielding Team: ", "");
+    startButton.disabled = false;
+    document.getElementById("data-entry").style.backgroundColor = "#D3D3D3";
+    document.getElementById("data-entry").style.color = "#000000";
+    document.getElementById("data-entry").style.borderColor = "#000000";
+    document.getElementById("data-entry").disabled = true;
 
     for (let ii = 0; ii < 6; ii++) {
         let playerL = prompt("Name of ", "batter");
@@ -75,8 +80,6 @@ function dataInput () {
         let aTeamC = aTeam.charAt(0).toUpperCase() + aTeam.slice(1);
         this.document.getElementById("away-team-team").innerHTML = aTeamC;
     }
-
-    startButton.disabled = false;
 
     console.log(hTeam);
     console.log(aTeam);

@@ -17,6 +17,8 @@ button {
     border-width: 0.3rem;
 }
 
+
+
 .wicket-button {
     background-color: #D3D3D3;
     border-color: black;
@@ -100,6 +102,26 @@ button {
 .bold {
     color: black;
     font-weight: bold;
+}
+
+#data-entry {
+    background-color: green;
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+#data-entry:hover {
+    border-color: green;
+    background-color: white;
+    color: green;
+    transition: 0.7s;
+}
+
+#data-entry:active {
+    border-color: black;
+    color: black;
+    background-color: grey;
 }
 
 #start-innings {
