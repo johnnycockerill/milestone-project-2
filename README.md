@@ -129,6 +129,7 @@ The primary colour of for typography is a dark grey (#445361), following the sam
   - These required prompts run without user interaction once the window has loaded.
   - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
 - The live stats area will display 'bat 1', 'bat 2' and 'bowl' as the players names by default prior to beginning main purpose.  This area will display live individual stats and total team score as the game progresses.
+
   <img src="assets/images/live_stat_screenshot.JPG">
 
 - The controls area holds a series of buttons and drop-downs linked to buttons.  These are coloured when active and greyed out when disabled to improve user experience and help navigation through the process.
@@ -139,6 +140,7 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 - At the bottom of page are the players stats area.  There are two panes, one for dismissed bats and one for individual bowlers stats which increase as the match progresses.
   - There is a sub heading for clarity displaying team name above respective players using the data inputted by the user earlier in the process.
+
   <img src="assets/images/player_stats.JPG">
 
   <img src="assets/images/bat_stat_screenshot.JPG">
@@ -225,6 +227,8 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 ## Testing
 
 ### Testing User Stories
+
+Manual testing relies on human interaction to execute test cases and identify defects in a software application, while automated testing uses pre-written scripts to run tests repeatedly and efficiently, with the key principles being that manual testing is more flexible and exploratory, while automated testing prioritizes speed, consistency, and regression testing across repetitive tasks. 
 
 - As a user, I want to be able to clearly know how to start and end a match scoring event.
   - The website requests necessary data from the user from autoload prompts, eliminating the chance the user will start the process without inputting all required inputs.

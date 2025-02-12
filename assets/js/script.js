@@ -2,8 +2,12 @@
  * python3 -m http.server
  */
 
+const dataEntry = document.getElementById("data-entry");
+dataEntry.addEventListener("click", dataInput);
+
 const startButton = document.getElementById("start-innings");
 startButton.addEventListener("click", startInnings);
+startButton.disabled = true;
 
 const dotButton = document.getElementById("dot");
 dotButton.addEventListener("click", dot);
@@ -33,12 +37,27 @@ const wicketsButton = document.getElementById("wicket-button");
 wicketsButton.addEventListener("click", wicket);
 wicketsButton.disabled = true;
 
+let team1 = [];
+let team2 = [];
+
 /**
  * function runs with window load to request the team names from the user
  */
-window.addEventListener("load", function teamInput () {
+
+function dataInput () {
     let hTeam = prompt("Batting Team: ", "");
     let aTeam = prompt("Fielding Team: ", "");
+
+    for (let ii = 0; ii < 6; ii++) {
+        let playerL = prompt("Name of ", "batter");
+        let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
+        team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
+    }
+        for (let ii = 0; ii < 6; ii++) {
+        let playerL = prompt("Name of ", "fielder");
+        let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
+        team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
+    }
 
     if (hTeam != null) {
         let hTeamC = hTeam.charAt(0).toUpperCase() + hTeam.slice(1);
@@ -57,31 +76,15 @@ window.addEventListener("load", function teamInput () {
         this.document.getElementById("away-team-team").innerHTML = aTeamC;
     }
 
+    startButton.disabled = false;
+
     console.log(hTeam);
     console.log(aTeam);
-});
 
-let team1 = [];
-let team2 = [];
 
-/**
- * function runs with window load to request the players names from the user
- */
-window.addEventListener("load", function submitTeam () {
-
-    for (let ii = 0; ii < 6; ii++) {
-    let playerL = prompt("Name of ", "batter");
-    let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
-    team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
-}
-    for (let ii = 0; ii < 6; ii++) {
-    let playerL = prompt("Name of ", "fielder");
-    let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
-    team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
-}
 console.log(team1);
 console.log(team2);
-});
+};
 
 let activeBats = [];
 let activeBowl = [];
