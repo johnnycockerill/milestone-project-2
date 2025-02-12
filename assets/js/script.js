@@ -45,8 +45,8 @@ let team2 = [];
  */
 
 function dataInput () {
-    let hTeam = prompt("Batting Team: ", "");
-    let aTeam = prompt("Fielding Team: ", "");
+    let hTeam = prompt("Please enter the name of the team batting first: ", "");
+    let aTeam = prompt("Please enter the name of the team fielding first: ", "");
     startButton.disabled = false;
     document.getElementById("data-entry").style.backgroundColor = "#D3D3D3";
     document.getElementById("data-entry").style.color = "#000000";
@@ -71,12 +71,12 @@ function dataInput () {
     }
 
     for (let ii = 0; ii < 6; ii++) {
-        let playerL = prompt("Name of ", "batter");
+        let playerL = prompt(`Please enter the name of No. ${i + 1} batter:`, "batter");
         let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
         team1[ii] = {name: player, number: ii + 1, score: 0, strike: false};
     }
         for (let ii = 0; ii < 6; ii++) {
-        let playerL = prompt("Name of ", "fielder");
+        let playerL = prompt(`Please enter the name of fielder no. ${i + 1}:`, "fielder");
         let player = playerL.charAt(0).toUpperCase() + playerL.slice(1);
         team2[ii] = {name: player, number: ii + 1, balls: 0, runs: 0, wickets: 0, active: false};
     }
