@@ -41,7 +41,7 @@ let team1 = [];
 let team2 = [];
 
 /**
- * function runs with window load to request the team names from the user
+ * function to request the team names from the user
  */
 
 function dataInput () {
