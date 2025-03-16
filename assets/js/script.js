@@ -193,7 +193,7 @@ function newBowler () {
     activeBowl[0].runs = document.getElementById("active-runs").innerHTML;
     activeBowl[0].wickets = document.getElementById("active-wkt").innerHTML;
 
-    let activeBowler = prompt(`Bowler No.: \n${team2[0].number}   ${team2[0].name} \n ${team2[1].number}   ${team2[1].name} \n ${team2[2].number}   ${team2[2].name} \n ${team2[3].number}   ${team2[3].name} \n ${team2[4].number}   ${team2[4].name}`, "number");
+    let activeBowler = prompt(`Change of bowler, please choose corresponding number of next bowler: \n${team2[0].number}   ${team2[0].name} \n ${team2[1].number}   ${team2[1].name} \n ${team2[2].number}   ${team2[2].name} \n ${team2[3].number}   ${team2[3].name} \n ${team2[4].number}   ${team2[4].name}`, "number");
     for (let object of team2) {
         if (object.number == activeBowler) {
             object.active = true;
