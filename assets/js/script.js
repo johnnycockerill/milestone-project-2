@@ -470,7 +470,6 @@ function wides () {
                 object.strike = true;
             }
         }
-    } else {        
     }
 
     for (let object of activeBats) {
