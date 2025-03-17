@@ -257,17 +257,17 @@ Manual testing relies on human interaction to execute test cases and identify de
 
 - W3 Validator has highlighted zero errors.
 
-  <img src="assets/images/HTML_Validation.JPG">
+  <img src="assets/images/html_validation.JPG">
 <br>
 
 - W3C Validator shows zero errors with CSS:
 
-  <img src="assets/images/CSS_Validation.JPG">
+  <img src="assets/images/css_validation.JPG">
 <br>
 
 - JSHint Validator shows zero errors, however 134 warnings all relating to mozilla browser compatability.
 
-  <img src="assets/images/JS_Hint_Validation.JPG">
+  <img src="assets/images/js_hint_validation.JPG">
 <br>
 
 ### Accessibility
