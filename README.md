@@ -104,7 +104,7 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 #### Footer
 
-- The footer includes link to teams league page.
+- The footer includes link to teams league page, in the form of the league icon.
 
 ### Landing Page
 
@@ -120,13 +120,13 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 #### Main Content
 
 - The main content is centred on the page.
-  - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.
+  - Firstly a series of prompts will request information from the user, the inputs will be required for the javascript functions to run.  All buttons barring one one will be disabled at this stage.
 
   <img src="assets/images/team1_choice_screenshot.JPG">
 
   <img src="assets/images/team2_choice_screenshot.JPG">
     
-  - These required prompts run without user interaction once the window has loaded.
+  - These required prompts run after the user clicks 'input info' button.  All other buttons will be disabled at this point.
   - Once load function (and prompts) have completed the page will display a series of buttons, all labelled with specific commands for user interaction.
 - The live stats area will display 'bat 1', 'bat 2' and 'bowl' as the players names by default prior to beginning main purpose.  This area will display live individual stats and total team score as the game progresses.
 
@@ -354,5 +354,5 @@ Manual testing relies on human interaction to execute test cases and identify de
 
 ## Acknowledgements
 
-* My tutor, Rokon, for his tuition.
+* My tutor, Len Johnson, for his tuition.
 * My mentor, Marcel, for his feedback and guidance.
