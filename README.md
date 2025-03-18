@@ -50,7 +50,7 @@ The purpose of the site is to allow a quick and easy method to score a match, re
 
 - The range of options/controls should be clear and unambiguous, there could be a range of IT profiencies from users.
 
-- Ultimately the site should detail the scores and winners of a cricket match.
+- This site should detail the scores of a cricket innings, holding the total and individuals figgures.
 
 ### Target Audience
 
@@ -194,6 +194,7 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 - The website could be linked to the league site, allowing users to view live scoresheets from other matches in the division or league.
 - The team and player data could be part of a collective database, held by league server.
+- The website would be developed to score both innings of a match, declaring a winner.
 
 ### Technologies Used
 
