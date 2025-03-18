@@ -46,6 +46,10 @@ button {
     display: inline-block;
 }
 
+header h1 {
+    font-size: 2.5rem;
+}
+
 /* --------- Page layout */
 
 #intro {
@@ -206,6 +210,10 @@ a img {
     #teams-heading {
         line-height: 3px;
         font-size: 2rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
     }
 
     .h-team {
