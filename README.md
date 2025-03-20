@@ -84,6 +84,10 @@ The primary colour of for typography is a dark grey (#445361), following the sam
 
 ### Wireframes
 
+<img src="assets/images/wireframe_image_2.png">
+
+The team statistics section for team 1 develops as the game progresses (see below), at the start of play it not show.
+
 <img src="assets/images/wireframe_image.png">
 
 
