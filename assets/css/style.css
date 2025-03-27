@@ -70,7 +70,7 @@ section h2 {
     background-color: #E6ECF0;
     box-sizing: border-box;
     width: 85%;
-    height: 80vh;
+    height: 85vh;
     max-height: 700px;
     max-width: 830px;
     margin-left: auto;
@@ -246,5 +246,36 @@ a img {
 
     a img {
         width: 60%;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    #main div {
+        height: fit-content;
+        max-height: none;
+    }
+    
+    .h-team {
+        float: none;
+        align-items: center;
+    }
+
+    .a-team {
+        float: none;
+    }
+
+    #bowling-table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    #teams-heading {
+        font-size: 1.1rem;
     }
 }
