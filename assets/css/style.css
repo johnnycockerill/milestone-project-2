@@ -212,6 +212,8 @@ a img {
     .scores-area {
         width: 100%;
         line-height: 2px;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     #teams-heading {
